@@ -17,10 +17,6 @@
 
 <body>
 
-  <!-- Contenido y secciones principales -->
-  <!-- ==========================================================================
-       BARRA SUPERIOR DE IMPACTO (GANCHO REAL DEL INSTAGRAM DE @LEUSWORK)
-       ========================================================================== -->
   <div class="top-bar">
     <div class="container-lw top-bar__inner">
       <div>
@@ -36,20 +32,15 @@
     </div>
   </div>
 
-  <!-- ==========================================================================
-       HEADER PRINCIPAL CON LOGOTIPO FIEL Y LAS 5 SECCIONES DEL BRIEFING
-       ========================================================================== -->
   <header class="site-header">
     <div class="container-lw site-header__inner">
 
-      <!-- Logotipo Oficial Leuswork! -->
       <a href="#inicio" class="brand-logo" aria-label="Leuswork Inicio">
         <span class="brand-logo__leus">Leus</span>
         <span class="brand-logo__work">work</span>
         <span class="brand-logo__bang">!</span>
       </a>
 
-      <!-- Menú de Navegación (Las 5 páginas/secciones principales del Briefing) -->
       <nav class="main-nav" aria-label="Navegación principal">
         <a href="#inicio" class="main-nav__link active" data-section="inicio">Inicio</a>
         <a href="#servicios" class="main-nav__link" data-section="servicios">Servicios</a>
@@ -58,20 +49,17 @@
         <a href="#contacto" class="main-nav__link" data-section="contacto">Contacto</a>
       </nav>
 
-      <!-- Botón de Conversión Principal (Briefing) -->
       <div class="header-cta-desktop">
         <a href="#contacto" class="btn-lw btn-lw--primary" style="padding: 10px 18px; font-size: 0.85rem;">
           Diagnóstico Gratis →
         </a>
       </div>
 
-      <!-- Botón Hamburguesa para Móviles -->
       <button type="button" class="mobile-toggle" id="mobileMenuBtn" aria-label="Abrir menú móvil">
         ☰ Menú
       </button>
     </div>
 
-    <!-- Menú Móvil Desplegable -->
     <div class="mobile-menu" id="mobileMenu">
       <div style="display: flex; flex-direction: column; gap: 10px;">
         <a href="#inicio" class="main-nav__link" onclick="closeMobileMenu()">01. Inicio</a>
@@ -87,13 +75,10 @@
   </header>
 
   <main>
-    <!-- ==========================================================================
-         SECCIÓN 01: INICIO (HERO DIRECTO CON EL MENSAJE REAL DE LEUSWORK)
-         ========================================================================== -->
+    <!-- 01. Inicio -->
     <section id="inicio" class="hero-section">
       <div class="container-lw hero-grid">
 
-        <!-- Columna Izquierda: Propuesta de Valor -->
         <div>
           <span class="badge-lw badge-lw--blue">
             <span class="status-dot"></span> Creatividad Estratégica para Emprendedores
@@ -117,21 +102,16 @@
             </a>
           </div>
 
-          <!-- Puntos de confianza -->
           <div style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 0.88rem; font-weight: 700;">
             <span style="display: inline-flex; align-items: center; gap: 6px;"><span
-                style="color: var(--color-blue); font-size: 1.1rem; line-height: 1;">✓</span> Asesoría cercana
-              2:1</span>
+                style="color: var(--color-blue); font-size: 1.1rem; line-height: 1;">✓</span> Asesoría cercana 2:1</span>
             <span style="display: inline-flex; align-items: center; gap: 6px;"><span
-                style="color: var(--color-blue); font-size: 1.1rem; line-height: 1;">✓</span> Identidad que cuenta
-              historias</span>
+                style="color: var(--color-blue); font-size: 1.1rem; line-height: 1;">✓</span> Identidad que cuenta historias</span>
             <span style="display: inline-flex; align-items: center; gap: 6px;"><span
-                style="color: var(--color-blue); font-size: 1.1rem; line-height: 1;">✓</span> Enfoque en resultados
-              reales</span>
+                style="color: var(--color-blue); font-size: 1.1rem; line-height: 1;">✓</span> Enfoque en resultados reales</span>
           </div>
         </div>
 
-        <!-- Columna Derecha: Test Interactivo basado en el post real de @leuswork -->
         <div class="audit-card">
           <span class="sticker-badge" style="position: absolute; top: -11px; right: 24px;">
             Diagnóstico Rápido · 20s
@@ -186,9 +166,7 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         CINTA INFINITA (MARQUEE) - PROYECTOS REALES Y AUTORIDAD DE MARCA
-         ========================================================================== -->
+    <!-- Marquee -->
     <div class="marquee-bar" aria-hidden="true">
       <div class="marquee-track">
         <span class="marquee-item"><span class="marquee-divider"></span> BRANDING SENSORIAL</span>
@@ -197,7 +175,6 @@
         <span class="marquee-item"><span class="marquee-divider"></span> GUÍA MAESTRO DE TU FEED</span>
         <span class="marquee-item"><span class="marquee-divider"></span> ASESORÍA CERCANA 2:1</span>
         <span class="marquee-item"><span class="marquee-divider"></span> BRAND KITS CON PROPÓSITO</span>
-        <!-- Duplicado para loop continuo infinito -->
         <span class="marquee-item"><span class="marquee-divider"></span> BRANDING SENSORIAL</span>
         <span class="marquee-item"><span class="marquee-divider"></span> CASO @ORIES.ART</span>
         <span class="marquee-item"><span class="marquee-divider"></span> PROYECTO RAY'S BOARD</span>
@@ -207,9 +184,7 @@
       </div>
     </div>
 
-    <!-- ==========================================================================
-         SECCIÓN 02: SERVICIOS (SOLUCIONES ESTRATÉGICAS DIRECTAS)
-         ========================================================================== -->
+    <!-- 02. Servicios -->
     <section id="servicios" class="services-section">
       <div class="container-lw">
 
@@ -227,7 +202,6 @@
 
         <div class="services-grid">
 
-          <!-- Servicio 1: Identidad Visual & Brand Kit (Destacado / Más Solicitado) -->
           <article class="service-card service-card--featured">
             <span class="sticker-badge sticker-badge--accent"
               style="position: absolute; top: -11px; right: 24px; transform: rotate(3deg);">
@@ -247,10 +221,8 @@
               </p>
               <ul class="service-list" style="color: #EFEFEF;">
                 <li><strong style="color: #5C73FF;">✓</strong> Diseño de Logotipo principal y variaciones.</li>
-                <li><strong style="color: #5C73FF;">✓</strong> Paleta de colores psicológica y tipografías de marca.
-                </li>
-                <li><strong style="color: #5C73FF;">✓</strong> Brand Kit entregable listo para aplicar en tus canales.
-                </li>
+                <li><strong style="color: #5C73FF;">✓</strong> Paleta de colores psicológica y tipografías de marca.</li>
+                <li><strong style="color: #5C73FF;">✓</strong> Brand Kit entregable listo para aplicar en tus canales.</li>
               </ul>
             </div>
             <button type="button" class="btn-lw btn-lw--primary"
@@ -259,7 +231,6 @@
             </button>
           </article>
 
-          <!-- Servicio 2: Asesoría 2:1 & Buyer Persona -->
           <article class="service-card">
             <div>
               <span class="service-number">Servicio 02 • Estrategia 2:1</span>
@@ -271,12 +242,9 @@
                 definir tu cliente ideal y organizar tu ruta de contenido.
               </p>
               <ul class="service-list">
-                <li><strong style="color: var(--color-blue);">✓</strong> Ejercicio práctico de retrato de tu Buyer
-                  Persona.</li>
-                <li><strong style="color: var(--color-blue);">✓</strong> Pilares de contenido para dejar de improvisar.
-                </li>
-                <li><strong style="color: var(--color-blue);">✓</strong> Diagnóstico de comunicación y objetivos de
-                  venta.</li>
+                <li><strong style="color: var(--color-blue);">✓</strong> Ejercicio práctico de retrato de tu Buyer Persona.</li>
+                <li><strong style="color: var(--color-blue);">✓</strong> Pilares de contenido para dejar de improvisar.</li>
+                <li><strong style="color: var(--color-blue);">✓</strong> Diagnóstico de comunicación y objetivos de venta.</li>
               </ul>
             </div>
             <button type="button" class="btn-lw btn-lw--secondary"
@@ -285,7 +253,6 @@
             </button>
           </article>
 
-          <!-- Servicio 3: Optimización de Instagram & Guía Maestro de tu Feed -->
           <article class="service-card">
             <div>
               <span class="service-number">Servicio 03 • Social Media</span>
@@ -297,12 +264,9 @@
                 clientes en los primeros 3 segundos.
               </p>
               <ul class="service-list">
-                <li><strong style="color: var(--color-blue);">✓</strong> Auditoría de Foto de Perfil, Biografía e
-                  Historias Destacadas.</li>
-                <li><strong style="color: var(--color-blue);">✓</strong> Diseño de plantillas estratégicas y carruseles
-                  de alto impacto.</li>
-                <li><strong style="color: var(--color-blue);">✓</strong> Guía didáctica personalizada para gestionar tu
-                  feed.</li>
+                <li><strong style="color: var(--color-blue);">✓</strong> Auditoría de Foto de Perfil, Biografía e Historias Destacadas.</li>
+                <li><strong style="color: var(--color-blue);">✓</strong> Diseño de plantillas estratégicas y carruseles de alto impacto.</li>
+                <li><strong style="color: var(--color-blue);">✓</strong> Guía didáctica personalizada para gestionar tu feed.</li>
               </ul>
             </div>
             <button type="button" class="btn-lw btn-lw--secondary"
@@ -311,7 +275,6 @@
             </button>
           </article>
 
-          <!-- Servicio 4: Diseño Web & Landing Pages -->
           <article class="service-card">
             <div>
               <span class="service-number">Servicio 04 • Presencia Digital</span>
@@ -323,12 +286,9 @@
                 servicios con autoridad y captar prospectos 24/7.
               </p>
               <ul class="service-list">
-                <li><strong style="color: var(--color-blue);">✓</strong> Estructura persuasiva (Inicio, Servicios, Casos
-                  y Contacto).</li>
-                <li><strong style="color: var(--color-blue);">✓</strong> Diseño adaptable a móviles (Responsive Design).
-                </li>
-                <li><strong style="color: var(--color-blue);">✓</strong> Formularios conectados para agendar
-                  diagnósticos o ventas.</li>
+                <li><strong style="color: var(--color-blue);">✓</strong> Estructura persuasiva (Inicio, Servicios, Casos y Contacto).</li>
+                <li><strong style="color: var(--color-blue);">✓</strong> Diseño adaptable a móviles (Responsive Design).</li>
+                <li><strong style="color: var(--color-blue);">✓</strong> Formularios conectados para agendar diagnósticos o ventas.</li>
               </ul>
             </div>
             <button type="button" class="btn-lw btn-lw--secondary"
@@ -341,9 +301,7 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         SECCIÓN 03: CASOS DE ÉXITO REALES (BRANDING SENSORIAL, ORIES.ART, RAY'S BOARD, FEED)
-         ========================================================================== -->
+    <!-- 03. Casos de éxito -->
     <section id="casos-exito" class="portfolio-section">
       <div class="container-lw">
 
@@ -354,19 +312,15 @@
             <h2 class="section-title" style="color: #FFFFFF;">Casos de Éxito & Proyectos</h2>
           </div>
 
-          <!-- Filtros simples con JS -->
           <div class="filter-bar" role="tablist">
             <button type="button" class="filter-btn active" onclick="filterCases('todos', this)">Todos (4)</button>
-            <button type="button" class="filter-btn" onclick="filterCases('branding', this)">Identidad & Brand
-              Kit</button>
-            <button type="button" class="filter-btn" onclick="filterCases('estrategia', this)">Producto &
-              Estrategia</button>
+            <button type="button" class="filter-btn" onclick="filterCases('branding', this)">Identidad & Brand Kit</button>
+            <button type="button" class="filter-btn" onclick="filterCases('estrategia', this)">Producto & Estrategia</button>
           </div>
         </div>
 
         <div class="portfolio-grid">
 
-          <!-- Caso Real 1: Branding Sensorial (Extraído del post DJ6w8UsomnM) -->
           <article class="case-card" data-category="branding">
             <div>
               <div class="case-visual case-visual--branding-sensorial">
@@ -398,7 +352,6 @@
             </div>
           </article>
 
-          <!-- Caso Real 2: @ories.art (Extraído del post DG9l-vggtOB) -->
           <article class="case-card" data-category="branding">
             <div>
               <div class="case-visual case-visual--ories">
@@ -429,7 +382,6 @@
             </div>
           </article>
 
-          <!-- Caso Real 3: RAY'S BOARD (Extraído del post C1Gf4BuAB2I) -->
           <article class="case-card" data-category="estrategia">
             <div>
               <div class="case-visual case-visual--rays">
@@ -461,7 +413,6 @@
             </div>
           </article>
 
-          <!-- Caso Real 4: Guía Didáctica "Maestro de tu Feed" (Extraído del post DMBfNpYxnuZ) -->
           <article class="case-card" data-category="estrategia">
             <div>
               <div class="case-visual case-visual--guia">
@@ -497,13 +448,10 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         SECCIÓN 04: QUIÉNES SOMOS (DAYANA & DIANA AÑEZ - CONFIANZA Y ROSTRO HUMANO)
-         ========================================================================== -->
+    <!-- 04. Quiénes somos -->
     <section id="quienes-somos" class="about-section">
       <div class="container-lw about-grid">
 
-        <!-- Texto e Historia de Marca -->
         <div>
           <span class="section-subtitle">04. Quiénes somos</span>
           <h2 class="section-title" style="margin-bottom: 18px;">
@@ -519,7 +467,6 @@
             visual sólida que atrae y genera clientes reales.
           </p>
 
-          <!-- 3 Pilares reales de su comunicación -->
           <div class="pillars-grid">
             <div class="pillar-box">
               <strong style="color: var(--color-blue); font-size: 1.2rem; display: block;">01. Propósito</strong>
@@ -539,10 +486,8 @@
           </div>
         </div>
 
-        <!-- Tarjetas de las Fundadoras (Datos reales del JSON de Instagram) -->
         <div class="founders-box">
 
-          <!-- Dayana Añez -->
           <article class="founder-card">
             <div>
               <div class="founder-avatar">
@@ -565,7 +510,6 @@
             </a>
           </article>
 
-          <!-- Diana Añez -->
           <article class="founder-card">
             <div>
               <div class="founder-avatar">
@@ -593,9 +537,7 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         SECCIÓN 05: CONTACTO & FORMULARIO DE DIAGNÓSTICO INICIAL GRATUITO
-         ========================================================================== -->
+    <!-- 05. Contacto -->
     <section id="contacto" class="contact-section">
       <div class="container-lw">
 
@@ -606,7 +548,6 @@
 
         <div class="contact-wrapper">
 
-          <!-- Información lateral del Diagnóstico -->
           <div class="contact-info">
             <div>
               <h2 style="font-size: 2.1rem; font-weight: 900; line-height: 1.1; margin-bottom: 14px;">
@@ -637,7 +578,6 @@
             </div>
           </div>
 
-          <!-- Formulario Interactivo -->
           <div class="contact-form-box">
             <form id="diagnosticForm" novalidate>
 
@@ -647,7 +587,7 @@
                   required />
               </div>
 
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div class="form-grid-2">
                 <div class="form-group">
                   <label class="form-label" for="correo">Correo Electrónico *</label>
                   <input type="email" id="correo" name="Email" class="form-input" placeholder="tu@correo.com"
@@ -663,12 +603,10 @@
               <div class="form-group">
                 <label class="form-label" for="servicioInteres">Servicio de Mayor Interés *</label>
                 <select id="servicioInteres" name="Servicio_Interes" class="form-select">
-                  <option value="Diagnóstico Inicial General">Quiero el Diagnóstico Inicial Gratuito para orientarme
-                  </option>
+                  <option value="Diagnóstico Inicial General">Quiero el Diagnóstico Inicial Gratuito para orientarme</option>
                   <option value="Asesoría 2:1 & Buyer Persona">Asesoría 2:1 & Definición de Buyer Persona</option>
                   <option value="Identidad Visual & Brand Kit">Identidad Visual & Brand Kit</option>
-                  <option value="Optimización de Instagram & Feed">Optimización de Instagram & Guía Maestro de tu Feed
-                  </option>
+                  <option value="Optimización de Instagram & Feed">Optimización de Instagram & Guía Maestro de tu Feed</option>
                   <option value="Diseño Web & Landing Pages">Diseño Web & Landing Pages</option>
                 </select>
               </div>
@@ -690,7 +628,6 @@
               </button>
             </form>
 
-            <!-- Mensaje de Éxito al Enviar -->
             <div id="formSuccess" style="display: none; text-align: center; padding: 32px 16px;">
               <div
                 style="width: 56px; height: 56px; border-radius: 50%; background-color: var(--color-blue); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; font-weight: 900; margin: 0 auto 16px; border: 2px solid var(--color-black);">
@@ -728,9 +665,9 @@
 
       <div style="display: flex; gap: 16px; font-size: 0.85rem; font-weight: 700;">
         <a href="#inicio">Inicio</a>
-        <a href="#quienes-somos">Quiénes somos</a>
         <a href="#servicios">Servicios</a>
         <a href="#casos-exito">Casos de éxito</a>
+        <a href="#quienes-somos">Quiénes somos</a>
         <a href="#contacto">Contacto</a>
       </div>
 

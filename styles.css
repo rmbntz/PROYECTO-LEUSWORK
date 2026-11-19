@@ -1,7 +1,6 @@
 /* ==========================================================================
-       1. VARIABLES CSS (:root) - SISTEMA DE DISEÑO LEUSWORK
-       Fácil de explicar al profesor: centraliza colores, fuentes y espaciados.
-       ========================================================================== */
+   1. VARIABLES CSS (:root)
+   ========================================================================== */
 :root {
   --color-black: #0A0A0A;
   --color-blue: #001AFF;
@@ -31,8 +30,8 @@
 }
 
 /* ==========================================================================
-       2. RESET Y ESTILOS BASE
-       ========================================================================== */
+   2. RESET Y ESTILOS BASE
+   ========================================================================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -69,7 +68,6 @@ ul {
   list-style: none;
 }
 
-/* Contenedor centrado reutilizable */
 .container-lw {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -77,10 +75,8 @@ ul {
 }
 
 /* ==========================================================================
-       3. RECONSTRUCCIÓN FIEL DEL LOGOTIPO OFICIAL "Leuswork!"
-       Basado exactamente en la imagen adjunta (Leus en negro geométrico,
-       work en azul manuscrito superpuesto y ! en negro).
-       ========================================================================== */
+   3. LOGOTIPO OFICIAL "Leuswork!"
+   ========================================================================== */
 .brand-logo {
   display: inline-flex;
   align-items: baseline;
@@ -116,8 +112,8 @@ ul {
 }
 
 /* ==========================================================================
-       4. COMPONENTES REUTILIZABLES (BOTONES, ETIQUETAS Y TARJETAS)
-       ========================================================================== */
+   4. COMPONENTES Y BOTONES
+   ========================================================================== */
 .badge-lw {
   display: inline-flex;
   align-items: center;
@@ -138,7 +134,6 @@ ul {
   color: #FFFFFF;
 }
 
-/* Indicador de pulso activo estilo Emil Kowalski */
 .status-dot {
   width: 7px;
   height: 7px;
@@ -159,7 +154,6 @@ ul {
   50% { opacity: 0.45; transform: scale(0.85); }
 }
 
-/* Etiqueta editorial minimalista con inclinación refinada */
 .sticker-badge {
   display: inline-flex;
   align-items: center;
@@ -232,7 +226,6 @@ ul {
   color: #FFFFFF;
 }
 
-/* Encabezados de sección estandarizados */
 .section-header {
   margin-bottom: 40px;
 }
@@ -255,8 +248,8 @@ ul {
 }
 
 /* ==========================================================================
-       5. BARRA DE ANUNCIO Y HEADER DE NAVEGACIÓN (STICKY)
-       ========================================================================== */
+   5. BARRA SUPERIOR Y HEADER (STICKY)
+   ========================================================================== */
 .top-bar {
   background:
     radial-gradient(circle at 82% -40%, rgba(104, 71, 255, 0.38), transparent 240px),
@@ -343,8 +336,8 @@ ul {
 }
 
 /* ==========================================================================
-       6. SECCIÓN 01: INICIO (HERO + REGLA DE LOS 3 SEGUNDOS)
-       ========================================================================== */
+   6. SECCIÓN 01: INICIO (HERO)
+   ========================================================================== */
 .hero-section {
   padding: 60px 0 70px;
   position: relative;
@@ -409,7 +402,6 @@ ul {
   margin-bottom: 32px;
 }
 
-/* Tarjeta interactiva derecha del Hero (Auditoría rápida de Instagram) */
 .audit-card {
   background:
     linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(245, 244, 255, 0.92));
@@ -457,8 +449,7 @@ ul {
 }
 
 /* ==========================================================================
-   CINTA INFINITA EN MOVIMIENTO (MARQUEE) - 100% CSS NATIVO
-   Fácil de explicar al profesor: @keyframes con translateX(-50%) para un loop continuo.
+   7. CINTA INFINITA (MARQUEE)
    ========================================================================== */
 .marquee-bar {
   background-color: var(--color-black);
@@ -505,94 +496,14 @@ ul {
   from {
     transform: translateX(0);
   }
-
   to {
     transform: translateX(-50%);
   }
 }
 
 /* ==========================================================================
-       7. SECCIÓN 02: QUIÉNES SOMOS (DAYANA & DIANA AÑEZ + FILOSOFÍA)
-       ========================================================================== */
-.about-section {
-  padding: 76px 0;
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 10% 20%, rgba(0, 26, 255, 0.16) 0%, transparent 45%),
-    radial-gradient(circle at 90% 80%, rgba(104, 71, 255, 0.18) 0%, transparent 45%),
-    linear-gradient(155deg, #FFFFFF 0%, #EFF4FF 48%, #E7E2FF 100%);
-  border-top: 2px solid var(--color-border);
-  border-bottom: 2px solid var(--color-border);
-}
-
-.about-section .container-lw {
-  position: relative;
-  z-index: 1;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-}
-
-.founders-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
-
-.founder-card {
-  background-color: var(--color-surface);
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 22px;
-  box-shadow: var(--shadow-card);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.founder-avatar {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  border: 2.5px solid var(--color-border);
-  box-shadow: 2px 2px 0px var(--color-black);
-  margin-bottom: 14px;
-  overflow: hidden;
-  background-color: var(--color-blue);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.founder-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-top: 28px;
-}
-
-.pillar-box {
-  background-color: var(--color-surface);
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  padding: 16px;
-}
-
-/* ==========================================================================
-       8. SECCIÓN 03: SERVICIOS REALES (@leuswork)
-       ========================================================================== */
+   8. SECCIÓN 02: SERVICIOS
+   ========================================================================== */
 .services-section {
   padding: 80px 0;
   position: relative;
@@ -666,8 +577,8 @@ ul {
 }
 
 /* ==========================================================================
-       9. SECCIÓN 04: CASOS DE ÉXITO REALES (EXTRAÍDOS DEL JSON DE INSTAGRAM)
-       ========================================================================== */
+   9. SECCIÓN 03: CASOS DE ÉXITO
+   ========================================================================== */
 .portfolio-section {
   padding: 80px 0;
   position: relative;
@@ -816,7 +727,6 @@ ul {
   z-index: 2;
 }
 
-/* Difuminados de degradado temáticos con overlay fotográfico */
 .case-visual--branding-sensorial {
   background: 
     linear-gradient(180deg, rgba(10, 10, 10, 0.40) 0%, rgba(12, 23, 84, 0.88) 100%),
@@ -850,8 +760,87 @@ ul {
 }
 
 /* ==========================================================================
-       10. SECCIÓN 05: CONTACTO & DIAGNÓSTICO INICIAL GRATUITO
-       ========================================================================== */
+   10. SECCIÓN 04: QUIÉNES SOMOS
+   ========================================================================== */
+.about-section {
+  padding: 76px 0;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(0, 26, 255, 0.16) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(104, 71, 255, 0.18) 0%, transparent 45%),
+    linear-gradient(155deg, #FFFFFF 0%, #EFF4FF 48%, #E7E2FF 100%);
+  border-top: 2px solid var(--color-border);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.about-section .container-lw {
+  position: relative;
+  z-index: 1;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.founders-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.founder-card {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.founder-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2.5px solid var(--color-border);
+  box-shadow: 2px 2px 0px var(--color-black);
+  margin-bottom: 14px;
+  overflow: hidden;
+  background-color: var(--color-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.founder-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.pillar-box {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+}
+
+/* ==========================================================================
+   11. SECCIÓN 05: CONTACTO
+   ========================================================================== */
 .contact-section {
   padding: 80px 0;
   position: relative;
@@ -897,6 +886,12 @@ ul {
   margin-bottom: 18px;
 }
 
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
 .form-label {
   display: block;
   font-size: 0.82rem;
@@ -929,8 +924,8 @@ ul {
 }
 
 /* ==========================================================================
-       11. FOOTER Y MODO PROFESOR / PRESENTACIÓN ACADÉMICA
-       ========================================================================== */
+   12. FOOTER
+   ========================================================================== */
 .site-footer {
   background:
     radial-gradient(circle at 82% 20%, rgba(104, 71, 255, 0.30), transparent 260px),
@@ -942,10 +937,9 @@ ul {
 }
 
 /* ==========================================================================
-       12. RESPONSIVE DESIGN (MEDIA QUERIES CLAROS PARA MÓVIL Y TABLET)
-       ========================================================================== */
+   13. RESPONSIVE DESIGN
+   ========================================================================== */
 @media (max-width: 900px) {
-
   .hero-grid,
   .about-grid,
   .services-grid,
@@ -970,9 +964,9 @@ ul {
 }
 
 @media (max-width: 600px) {
-
   .founders-box,
-  .pillars-grid {
+  .pillars-grid,
+  .form-grid-2 {
     grid-template-columns: 1fr;
   }
 
@@ -985,7 +979,6 @@ ul {
     padding: 24px;
   }
 
-  /* Ajustes móviles que garantizan legibilidad y visualización sin desbordes */
   .case-visual {
     min-height: 220px;
     height: auto;
