@@ -86,20 +86,22 @@
           submitBtn.textContent = 'Enviando solicitud... ⏳';
         }
 
-        // Envío asíncrono en segundo plano a FormSubmit
-        fetch('https://formsubmit.co/ajax/ryanbenitez171@gmail.com', {
+        // Envío asíncrono en segundo plano a Web3Forms
+        fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
           body: JSON.stringify({
+            access_key: 'eb2337b7-0c45-4611-b81d-d313ae6fb3d2',
             Nombre: nombre,
             Email: correo,
             Instagram: instagram,
             Servicio: servicio,
             Mensaje: mensaje,
-            _subject: '🚀 Nueva Solicitud de Diagnóstico - ' + nombre + ' (' + instagram + ')'
+            from_name: 'Leuswork Web Leads',
+            subject: '🚀 Nueva Solicitud de Diagnóstico - ' + nombre + ' (' + instagram + ')'
           })
         })
         .then(function (res) {
