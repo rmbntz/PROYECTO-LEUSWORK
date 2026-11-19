@@ -19,11 +19,11 @@ function updateAuditFeedback() {
   if (!feedbackBox) return;
 
   if (checkedCount === 0) {
-    feedbackBox.textContent = 'Excelente base. Aun así, podemos ayudarte a escalar tus resultados al siguiente nivel.';
+    feedbackBox.textContent = '¡Excelente base! Tu marca tiene un punto de partida sólido.';
   } else if (checkedCount <= 2) {
-    feedbackBox.textContent = 'Tienes ' + checkedCount + ' punto(s) clave por optimizar. Podemos resolverlo en tu Diagnóstico Inicial.';
+    feedbackBox.textContent = 'Tienes ' + checkedCount + ' punto(s) clave por optimizar para destacar de la competencia.';
   } else {
-    feedbackBox.textContent = 'Tu marca necesita estructura estratégica urgente (' + checkedCount + '/4 señales detectadas). Agenda tu Diagnóstico Inicial hoy mismo.';
+    feedbackBox.textContent = 'Detectamos ' + checkedCount + '/4 aspectos a potenciar con una identidad estratégica.';
   }
 }
 

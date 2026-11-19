@@ -564,7 +564,7 @@ ul {
 }
 
 .service-list {
-  margin: 18px 0 24px;
+  margin: 18px 0 20px;
 }
 
 .service-list li {
@@ -574,6 +574,37 @@ ul {
   font-size: 0.92rem;
   margin-bottom: 8px;
   font-weight: 500;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1.5px dashed #D5D5D0;
+}
+
+.service-card--featured .service-tags {
+  border-top: 1.5px dashed rgba(255, 255, 255, 0.2);
+}
+
+.service-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 11px;
+  border-radius: var(--radius-pill);
+  background-color: rgba(0, 26, 255, 0.08);
+  color: var(--color-blue);
+  border: 1px solid rgba(0, 26, 255, 0.18);
+}
+
+.service-card--featured .service-tag {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 /* ==========================================================================
