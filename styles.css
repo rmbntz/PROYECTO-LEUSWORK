@@ -1,0 +1,758 @@
+/* ==========================================================================
+       1. VARIABLES CSS (:root) - SISTEMA DE DISEÑO LEUSWORK
+       Fácil de explicar al profesor: centraliza colores, fuentes y espaciados.
+       ========================================================================== */
+    :root {
+      --color-black: #0A0A0A;       /* Negro profundo del logotipo "Leus" y "!" */
+      --color-blue: #001AFF;        /* Azul eléctrico original de "work" */
+      --color-blue-hover: #0012B8;  /* Variante oscura para estados hover */
+      --color-bg: #F7F7F5;          /* Blanco hueso / papel editorial limpio */
+      --color-surface: #FFFFFF;     /* Blanco puro para tarjetas */
+      --color-text: #141414;        /* Texto principal de alto contraste */
+      --color-muted: #5A5A58;       /* Texto secundario */
+      --color-border: #0A0A0A;      /* Bordes definidos estilo editorial moderno */
+      --color-purple: #6847FF;
+      --color-purple-soft: #DCD7FF;
+
+      --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-hand: 'Caveat', cursive;
+
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-pill: 9999px;
+
+      --shadow-card: 5px 5px 0px #0A0A0A;
+      --shadow-blue: 5px 5px 0px #001AFF;
+      --shadow-sm: 3px 3px 0px #0A0A0A;
+
+      --max-width: 1160px;
+      --transition: all 0.2s ease-in-out;
+    }
+
+    /* ==========================================================================
+       2. RESET Y ESTILOS BASE
+       ========================================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background:
+        radial-gradient(circle at 8% 18%, rgba(0, 26, 255, 0.05), transparent 24rem),
+        radial-gradient(circle at 92% 48%, rgba(104, 71, 255, 0.06), transparent 28rem),
+        var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* Contenedor centrado reutilizable */
+    .container-lw {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ==========================================================================
+       3. RECONSTRUCCIÓN FIEL DEL LOGOTIPO OFICIAL "Leuswork!"
+       Basado exactamente en la imagen adjunta (Leus en negro geométrico,
+       work en azul manuscrito superpuesto y ! en negro).
+       ========================================================================== */
+    .brand-logo {
+      display: inline-flex;
+      align-items: baseline;
+      font-size: 2rem;
+      user-select: none;
+      line-height: 1;
+    }
+
+    .brand-logo__leus {
+      font-family: var(--font-main);
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      color: var(--color-black);
+    }
+
+    .brand-logo__work {
+      font-family: var(--font-hand);
+      font-weight: 700;
+      font-size: 2.35rem;
+      color: var(--color-blue);
+      margin-left: -4px;
+      margin-right: 1px;
+      transform: rotate(-2deg);
+      display: inline-block;
+    }
+
+    .brand-logo__bang {
+      font-family: var(--font-main);
+      font-weight: 900;
+      color: var(--color-black);
+      transform: rotate(3deg);
+      display: inline-block;
+    }
+
+    /* ==========================================================================
+       4. COMPONENTES REUTILIZABLES (BOTONES, ETIQUETAS Y TARJETAS)
+       ========================================================================== */
+    .badge-lw {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border: 2px solid var(--color-border);
+      background-color: var(--color-surface);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .badge-lw--blue {
+      background-color: var(--color-blue);
+      color: #FFFFFF;
+    }
+
+    .btn-lw {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 24px;
+      border-radius: var(--radius-md);
+      font-weight: 800;
+      font-size: 0.95rem;
+      border: 2px solid var(--color-border);
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-lw:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .btn-lw:active {
+      transform: translate(1px, 1px);
+      box-shadow: none;
+    }
+
+    .btn-lw--primary {
+      background-color: var(--color-blue);
+      color: #FFFFFF;
+    }
+
+    .btn-lw--primary:hover {
+      background-color: var(--color-blue-hover);
+    }
+
+    .btn-lw--secondary {
+      background-color: var(--color-surface);
+      color: var(--color-black);
+    }
+
+    .btn-lw--secondary:hover {
+      background-color: var(--color-black);
+      color: #FFFFFF;
+    }
+
+    /* Encabezados de sección estandarizados */
+    .section-header {
+      margin-bottom: 40px;
+    }
+
+    .section-subtitle {
+      font-family: var(--font-hand);
+      color: var(--color-blue);
+      font-size: 1.65rem;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: clamp(1.9rem, 4vw, 2.75rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: var(--color-black);
+    }
+
+    /* ==========================================================================
+       5. BARRA DE ANUNCIO Y HEADER DE NAVEGACIÓN (STICKY)
+       ========================================================================== */
+    .top-bar {
+      background:
+        radial-gradient(circle at 82% -40%, rgba(104, 71, 255, 0.38), transparent 240px),
+        linear-gradient(135deg, #0A0A0A 0%, #11111A 58%, #080B22 100%);
+      color: #FFFFFF;
+      font-size: 0.8rem;
+      padding: 8px 0;
+      border-bottom: 2px solid var(--color-black);
+    }
+
+    .top-bar__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background:
+        linear-gradient(90deg, rgba(247, 247, 245, 0.96), rgba(255, 255, 255, 0.94)),
+        radial-gradient(circle at 78% 20%, rgba(0, 26, 255, 0.08), transparent 180px);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--color-border);
+    }
+
+    .site-header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .main-nav__link {
+      padding: 8px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 0.9rem;
+      font-weight: 700;
+      border: 2px solid transparent;
+      transition: var(--transition);
+    }
+
+    .main-nav__link:hover,
+    .main-nav__link.active {
+      background-color: var(--color-surface);
+      border-color: var(--color-border);
+      box-shadow: 2px 2px 0px var(--color-black);
+    }
+
+    .main-nav__link.active {
+      background-color: var(--color-blue);
+      color: #FFFFFF;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: var(--color-surface);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 8px 12px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .mobile-menu {
+      display: none;
+      background: var(--color-surface);
+      border-bottom: 2px solid var(--color-border);
+      padding: 16px 20px;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    /* ==========================================================================
+       6. SECCIÓN 01: INICIO (HERO + REGLA DE LOS 3 SEGUNDOS)
+       ========================================================================== */
+    .hero-section {
+      padding: 60px 0 70px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, #FFFFFF 0%, #F7F8FF 62%, #EEEAFE 100%);
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: 4%;
+      top: 10%;
+      border-radius: 50%;
+      background: rgba(104, 71, 255, 0.08);
+      filter: blur(45px);
+      pointer-events: none;
+    }
+
+    .hero-section .container-lw {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.04;
+      letter-spacing: -0.04em;
+      margin: 18px 0 20px;
+    }
+
+    .hero-title__highlight {
+      color: var(--color-blue);
+      text-decoration: underline;
+      text-decoration-thickness: 4px;
+      text-underline-offset: 6px;
+    }
+
+    .hero-lead {
+      font-size: 1.1rem;
+      color: var(--color-muted);
+      margin-bottom: 28px;
+      max-width: 560px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    /* Tarjeta interactiva derecha del Hero (Auditoría rápida de Instagram) */
+    .audit-card {
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(245, 244, 255, 0.92));
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+    }
+
+    .audit-card__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+      border-bottom: 2px dashed #D5D5D0;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 10px;
+      cursor: pointer;
+      background-color: var(--color-bg);
+      transition: var(--transition);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .check-item:hover {
+      border-color: var(--color-blue);
+      background-color: #FFFFFF;
+    }
+
+    .check-item input {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--color-blue);
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       7. SECCIÓN 02: QUIÉNES SOMOS (DAYANA & DIANA AÑEZ + FILOSOFÍA)
+       ========================================================================== */
+    .about-section {
+      padding: 76px 0;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(120deg, #FFFFFF 0%, #F8F9FF 68%, #F0EEFF 100%);
+      border-top: 2px solid var(--color-border);
+      border-bottom: 2px solid var(--color-border);
+    }
+
+    .about-section .container-lw {
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .founders-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .founder-card {
+      background-color: var(--color-bg);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .founder-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background-color: var(--color-blue);
+      color: #FFFFFF;
+      border: 2px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .pillar-box {
+      background-color: var(--color-bg);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+    }
+
+    /* ==========================================================================
+       8. SECCIÓN 03: SERVICIOS REALES (@leuswork)
+       ========================================================================== */
+    .services-section {
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, #F1F4FF 0%, #FFFFFF 52%, #F8F6FF 100%);
+    }
+
+    .services-section .container-lw {
+      position: relative;
+      z-index: 1;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background-color: var(--color-surface);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-blue);
+    }
+
+    .service-card--featured {
+      background:
+        radial-gradient(circle at 90% 10%, rgba(104, 71, 255, 0.48), transparent 210px),
+        radial-gradient(circle at 12% 85%, rgba(0, 26, 255, 0.34), transparent 230px),
+        linear-gradient(145deg, #101018 0%, #09091A 55%, #05050A 100%);
+      color: #FFFFFF;
+    }
+
+    .service-number {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      border: 2px solid currentColor;
+      display: inline-block;
+      margin-bottom: 14px;
+    }
+
+    .service-list {
+      margin: 18px 0 24px;
+    }
+
+    .service-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.92rem;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       9. SECCIÓN 04: CASOS DE ÉXITO REALES (EXTRAÍDOS DEL JSON DE INSTAGRAM)
+       ========================================================================== */
+    .portfolio-section {
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 18% 8%, rgba(104, 71, 255, 0.26), transparent 24rem),
+        radial-gradient(circle at 88% 82%, rgba(0, 26, 255, 0.32), transparent 28rem),
+        linear-gradient(145deg, #09090D 0%, #0A0A12 55%, #080818 100%);
+      color: #FFFFFF;
+      border-top: 2px solid var(--color-border);
+      border-bottom: 2px solid var(--color-border);
+    }
+
+    .portfolio-section .container-lw {
+      position: relative;
+      z-index: 1;
+    }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .filter-btn {
+      padding: 8px 18px;
+      border-radius: var(--radius-pill);
+      border: 2px solid #FFFFFF;
+      background-color: transparent;
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background-color: var(--color-blue);
+      border-color: var(--color-blue);
+      color: #FFFFFF;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .case-card {
+      background-color: var(--color-surface);
+      color: var(--color-black);
+      border: 2px solid #FFFFFF;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 6px 6px 0px var(--color-blue);
+    }
+
+    .case-card.hidden-case {
+      display: none;
+    }
+
+    .case-visual {
+      height: 210px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--color-border);
+      position: relative;
+    }
+
+    .case-body {
+      padding: 24px;
+    }
+
+    /* ==========================================================================
+       10. SECCIÓN 05: CONTACTO & DIAGNÓSTICO INICIAL GRATUITO
+       ========================================================================== */
+    .contact-section {
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(125deg, #FFFFFF 0%, #F5F7FF 58%, #ECEAFF 100%);
+    }
+
+    .contact-section .container-lw {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-wrapper {
+      background-color: var(--color-surface);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      overflow: hidden;
+    }
+
+    .contact-info {
+      background:
+        radial-gradient(circle at 80% 18%, rgba(104, 71, 255, 0.48), transparent 190px),
+        linear-gradient(145deg, #001AFF 0%, #0014C9 72%, #1A0F78 100%);
+      color: #FFFFFF;
+      padding: 40px;
+      border-right: 2px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .contact-form-box {
+      padding: 40px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      background-color: var(--color-bg);
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--color-blue);
+      background-color: #FFFFFF;
+      box-shadow: 3px 3px 0px var(--color-blue);
+    }
+
+    /* ==========================================================================
+       11. FOOTER Y MODO PROFESOR / PRESENTACIÓN ACADÉMICA
+       ========================================================================== */
+    .site-footer {
+      background:
+        radial-gradient(circle at 82% 20%, rgba(104, 71, 255, 0.30), transparent 260px),
+        radial-gradient(circle at 12% 100%, rgba(0, 26, 255, 0.18), transparent 220px),
+        linear-gradient(135deg, #080808 0%, #0D0C18 100%);
+      color: #FFFFFF;
+      padding: 48px 0 32px;
+      border-top: 2px solid var(--color-border);
+    }
+
+    /* ==========================================================================
+       12. RESPONSIVE DESIGN (MEDIA QUERIES CLAROS PARA MÓVIL Y TABLET)
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid,
+      .services-grid,
+      .portfolio-grid,
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info {
+        border-right: none;
+        border-bottom: 2px solid var(--color-border);
+      }
+
+      .main-nav,
+      .header-cta-desktop {
+        display: none;
+      }
+
+      .mobile-toggle {
+        display: inline-block;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .founders-box,
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-section {
+        padding: 36px 0 48px;
+      }
+
+      .contact-info,
+      .contact-form-box {
+        padding: 24px;
+      }
+    }

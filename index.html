@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leuswork! | Creatividad Estratégica — Diseño, Branding y Estrategia Digital</title>
+  <meta name="description" content="El diseño no es solo estética, es estrategia. Ayudamos a emprendedores a construir una identidad visual con propósito. Solicita tu Diagnóstico Inicial Gratuito." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Contenido y secciones principales -->
+<!-- ==========================================================================
+       BARRA SUPERIOR DE IMPACTO (GANCHO REAL DEL INSTAGRAM DE @LEUSWORK)
+       ========================================================================== -->
+  <div class="top-bar">
+    <div class="container-lw top-bar__inner">
+      <div>
+        <span>⚡ <strong>Regla de los 3 segundos:</strong> Tu diseño define si un cliente se queda o sigue deslizando.</span>
+      </div>
+      <div>
+        <a href="https://www.instagram.com/leuswork/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; font-weight: 700;">
+          Instagram @leuswork ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       HEADER PRINCIPAL CON LOGOTIPO FIEL Y LAS 5 SECCIONES DEL BRIEFING
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container-lw site-header__inner">
+      
+      <!-- Logotipo Oficial Leuswork! -->
+      <a href="#inicio" class="brand-logo" aria-label="Leuswork Inicio">
+        <span class="brand-logo__leus">Leus</span>
+        <span class="brand-logo__work">work</span>
+        <span class="brand-logo__bang">!</span>
+      </a>
+
+      <!-- Menú de Navegación (Las 5 páginas/secciones principales del Briefing) -->
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#inicio" class="main-nav__link active" data-section="inicio">Inicio</a>
+        <a href="#quienes-somos" class="main-nav__link" data-section="quienes-somos">Quiénes somos</a>
+        <a href="#servicios" class="main-nav__link" data-section="servicios">Servicios</a>
+        <a href="#casos-exito" class="main-nav__link" data-section="casos-exito">Casos de éxito</a>
+        <a href="#contacto" class="main-nav__link" data-section="contacto">Contacto</a>
+      </nav>
+
+      <!-- Botón de Conversión Principal (Briefing) -->
+      <div class="header-cta-desktop">
+        <a href="#contacto" class="btn-lw btn-lw--primary" style="padding: 10px 18px; font-size: 0.85rem;">
+          Diagnóstico Gratis →
+        </a>
+      </div>
+
+      <!-- Botón Hamburguesa para Móviles -->
+      <button type="button" class="mobile-toggle" id="mobileMenuBtn" aria-label="Abrir menú móvil">
+        ☰ Menú
+      </button>
+    </div>
+
+    <!-- Menú Móvil Desplegable -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <a href="#inicio" class="main-nav__link" onclick="closeMobileMenu()">01. Inicio</a>
+        <a href="#quienes-somos" class="main-nav__link" onclick="closeMobileMenu()">02. Quiénes somos</a>
+        <a href="#servicios" class="main-nav__link" onclick="closeMobileMenu()">03. Servicios</a>
+        <a href="#casos-exito" class="main-nav__link" onclick="closeMobileMenu()">04. Casos de éxito</a>
+        <a href="#contacto" class="main-nav__link" onclick="closeMobileMenu()">05. Contacto</a>
+        <a href="#contacto" class="btn-lw btn-lw--primary" onclick="closeMobileMenu()" style="margin-top: 6px;">
+          Solicitar Diagnóstico Inicial Gratuito
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         SECCIÓN 01: INICIO (HERO DIRECTO CON EL MENSAJE REAL DE LEUSWORK)
+         ========================================================================== -->
+    <section id="inicio" class="hero-section">
+      <div class="container-lw hero-grid">
+        
+        <!-- Columna Izquierda: Propuesta de Valor -->
+        <div>
+          <span class="badge-lw badge-lw--blue">
+            🎯 Creatividad Estratégica para Emprendedores
+          </span>
+
+          <h1 class="hero-title">
+            El diseño no es solo estética, <span class="hero-title__highlight">es estrategia.</span>
+          </h1>
+
+          <p class="hero-lead">
+            ¿Sabías que las personas tardan <strong>menos de 3 segundos</strong> en decidir si te siguen o te compran? Si crear contenido te estresa o sientes que tu marca luce igual a las demás, te ayudamos a dejar de improvisar y construir una identidad con propósito.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contacto" class="btn-lw btn-lw--primary">
+              Agenda tu Diagnóstico Inicial GRATIS 📩
+            </a>
+            <a href="#casos-exito" class="btn-lw btn-lw--secondary">
+              Ver Casos de Éxito
+            </a>
+          </div>
+
+          <!-- Puntos de confianza -->
+          <div style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 0.88rem; font-weight: 700;">
+            <span>✓ Asesoría cercana 2:1</span>
+            <span>✓ Identidad que cuenta historias</span>
+            <span>✓ Enfoque en resultados reales</span>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Test Interactivo basado en el post real de @leuswork -->
+        <div class="audit-card">
+          <div class="audit-card__header">
+            <div>
+              <span style="font-size: 0.75rem; font-weight: 800; color: var(--color-blue); text-transform: uppercase;">
+                Auto-Evaluación Rápida
+              </span>
+              <h2 style="font-size: 1.25rem; font-weight: 900; line-height: 1.2;">
+                ¿Tu marca comunica lo que vendes? 🤔
+              </h2>
+            </div>
+            <span style="font-family: var(--font-hand); font-size: 1.6rem; color: var(--color-blue);">
+              Checklist!
+            </span>
+          </div>
+
+          <p style="font-size: 0.88rem; color: var(--color-muted); margin-bottom: 14px;">
+            Marca los puntos que hoy le faltan a tu negocio o perfil de Instagram:
+          </p>
+
+          <div id="quickAuditList">
+            <label class="check-item">
+              <input type="checkbox" checked onchange="updateAuditFeedback()" />
+              <span>Mi foto de perfil y biografía no explican claro a quién ayudo.</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" onchange="updateAuditFeedback()" />
+              <span>Publico sin rumbo y crear contenido me genera estrés.</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" onchange="updateAuditFeedback()" />
+              <span>Siento que mi identidad visual no me diferencia de la competencia.</span>
+            </label>
+            <label class="check-item">
+              <input type="checkbox" onchange="updateAuditFeedback()" />
+              <span>Aún no tengo definido mi Buyer Persona (cliente ideal).</span>
+            </label>
+          </div>
+
+          <div id="auditFeedbackBox" style="background-color: #EEF0FF; border: 2px solid var(--color-blue); border-radius: var(--radius-sm); padding: 12px; margin: 14px 0; font-size: 0.85rem; font-weight: 700; color: var(--color-black);">
+            💡 Tienes oportunidades clave de mejora. ¡Podemos resolverlo en tu Diagnóstico Inicial Gratuito!
+          </div>
+
+          <a href="#contacto" class="btn-lw btn-lw--primary" style="width: 100%;">
+            Solicitar mi Diagnóstico Gratis ahora →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 02: QUIÉNES SOMOS (DAYANA & DIANA AÑEZ - EQUIPO REAL)
+         ========================================================================== -->
+    <section id="quienes-somos" class="about-section">
+      <div class="container-lw about-grid">
+        
+        <!-- Texto e Historia de Marca -->
+        <div>
+          <span class="section-subtitle">02. Quiénes somos</span>
+          <h2 class="section-title" style="margin-bottom: 18px;">
+            Detrás de cada “es suerte”, hay estrategia y trabajo en equipo 🎯
+          </h2>
+          <p style="margin-bottom: 14px; color: var(--color-muted);">
+            ¡Hola! Somos <strong>Dayana y Diana Añez</strong>, fundadoras de <strong>Leuswork!</strong> Creemos firmemente que diseñar no es decorar: es codificar una historia para que tu marca hable por sí sola sin que tengas que explicarla.
+          </p>
+          <p style="color: var(--color-muted);">
+            Acompañamos a emprendedores y marcas personales desde el primer paso —incluso cuando solo tienen una idea en papel— hasta convertirla en una identidad visual y digital sólida que atrae, conecta y vende.
+          </p>
+
+          <!-- 3 Pilares reales de su comunicación -->
+          <div class="pillars-grid">
+            <div class="pillar-box">
+              <strong style="color: var(--color-blue); font-size: 1.2rem; display: block;">01. Propósito</strong>
+              <span style="font-size: 0.82rem; color: var(--color-muted);">No seguimos modas vacías que apagan tu esencia.</span>
+            </div>
+            <div class="pillar-box">
+              <strong style="color: var(--color-blue); font-size: 1.2rem; display: block;">02. Cercanía</strong>
+              <span style="font-size: 0.82rem; color: var(--color-muted);">Somos tus fans más grandes en cada paso del proceso.</span>
+            </div>
+            <div class="pillar-box">
+              <strong style="color: var(--color-blue); font-size: 1.2rem; display: block;">03. Método</strong>
+              <span style="font-size: 0.82rem; color: var(--color-muted);">Ordenamos tu estrategia para crecer con intención.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjetas de las Fundadoras (Datos reales del JSON de Instagram) -->
+        <div class="founders-box">
+          
+          <!-- Dayana Añez -->
+          <article class="founder-card">
+            <div>
+              <div class="founder-avatar">DA</div>
+              <span style="font-size: 0.75rem; font-weight: 800; color: var(--color-blue); text-transform: uppercase;">
+                Co-Fundadora & Diseñadora
+              </span>
+              <h3 style="font-size: 1.25rem; font-weight: 900; margin: 4px 0 8px;">
+                Dayana Añez
+              </h3>
+              <p style="font-size: 0.88rem; color: var(--color-muted); margin-bottom: 16px;">
+                Especialista en Diseño Gráfico, Brand Kits, identidad visual estratégica y sistemas visuales para redes sociales.
+              </p>
+            </div>
+            <a href="https://www.instagram.com/dayanaanez/" target="_blank" rel="noopener noreferrer" style="font-size: 0.82rem; font-weight: 800; color: var(--color-blue);">
+              @dayanaanez ↗
+            </a>
+          </article>
+
+          <!-- Diana Añez -->
+          <article class="founder-card">
+            <div>
+              <div class="founder-avatar" style="background-color: var(--color-black);">AX</div>
+              <span style="font-size: 0.75rem; font-weight: 800; color: var(--color-blue); text-transform: uppercase;">
+                Co-Fundadora & Estratega
+              </span>
+              <h3 style="font-size: 1.25rem; font-weight: 900; margin: 4px 0 8px;">
+                Diana Añez
+              </h3>
+              <p style="font-size: 0.88rem; color: var(--color-muted); margin-bottom: 16px;">
+                Especialista en Inspiración, Marca Personal, narrativa visual, arte digital y conexión emocional con audiencias.
+              </p>
+            </div>
+            <a href="https://www.instagram.com/axezpro/" target="_blank" rel="noopener noreferrer" style="font-size: 0.82rem; font-weight: 800; color: var(--color-blue);">
+              @axezpro ↗
+            </a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 03: SERVICIOS (BASADOS EN SUS OFERTAS REALES DE INSTAGRAM)
+         ========================================================================== -->
+    <section id="servicios" class="services-section">
+      <div class="container-lw">
+        
+        <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <span class="section-subtitle">03. Nuestros Servicios</span>
+            <h2 class="section-title">Soluciones para que tu marca destaque</h2>
+          </div>
+          <p style="max-width: 440px; font-size: 0.92rem; color: var(--color-muted);">
+            Haz clic en cualquier servicio para preseleccionarlo directamente en tu solicitud de <strong>Diagnóstico Inicial Gratuito</strong>.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          
+          <!-- Servicio 1: Asesoría 2:1 & Buyer Persona -->
+          <article class="service-card">
+            <div>
+              <span class="service-number">Servicio 01 • Estrategia</span>
+              <h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 10px;">
+                Asesoría 2:1 & Definición de Buyer Persona
+              </h3>
+              <p style="font-size: 0.92rem; color: var(--color-muted);">
+                Si publicar te estresa porque no tienes un proceso claro, nos sentamos contigo (Dayana y Diana) para definir tu cliente ideal y organizar tu ruta de contenido.
+              </p>
+              <ul class="service-list">
+                <li><strong style="color: var(--color-blue);">✓</strong> Ejercicio práctico de retrato de tu Buyer Persona.</li>
+                <li><strong style="color: var(--color-blue);">✓</strong> Pilares de contenido para dejar de improvisar.</li>
+                <li><strong style="color: var(--color-blue);">✓</strong> Diagnóstico de comunicación y objetivos de venta.</li>
+              </ul>
+            </div>
+            <button type="button" class="btn-lw btn-lw--secondary" onclick="selectService('Asesoría 2:1 & Buyer Persona')">
+              Elegir Asesoría 2:1 →
+            </button>
+          </article>
+
+          <!-- Servicio 2: Identidad Visual & Brand Kit (Destacado) -->
+          <article class="service-card service-card--featured">
+            <div>
+              <span class="service-number" style="border-color: var(--color-blue); background-color: var(--color-blue); color: #FFFFFF;">
+                Servicio 02 • Más Solicitado
+              </span>
+              <h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 10px;">
+                Identidad Visual & Brand Kit con Propósito
+              </h3>
+              <p style="font-size: 0.92rem; color: #D4D4D4;">
+                Convertimos tu visión en una identidad visual memorable que cuenta tu historia, despierta emociones y te diferencia de un mercado donde todos lucen iguales.
+              </p>
+              <ul class="service-list" style="color: #EFEFEF;">
+                <li><strong style="color: #5C73FF;">✓</strong> Diseño de Logotipo principal y variaciones.</li>
+                <li><strong style="color: #5C73FF;">✓</strong> Paleta de colores psicológica y tipografías de marca.</li>
+                <li><strong style="color: #5C73FF;">✓</strong> Brand Kit entregable listo para aplicar en tus canales.</li>
+              </ul>
+            </div>
+            <button type="button" class="btn-lw btn-lw--primary" onclick="selectService('Identidad Visual & Brand Kit')">
+              Cotizar mi Brand Kit →
+            </button>
+          </article>
+
+          <!-- Servicio 3: Optimización de Instagram & Guía Maestro de tu Feed -->
+          <article class="service-card">
+            <div>
+              <span class="service-number">Servicio 03 • Social Media</span>
+              <h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 10px;">
+                Optimización de Perfil & "Maestro de tu Feed"
+              </h3>
+              <p style="font-size: 0.92rem; color: var(--color-muted);">
+                Tu perfil de Instagram es tu carta de presentación. Optimizamos cada elemento visual para conquistar clientes en los primeros 3 segundos.
+              </p>
+              <ul class="service-list">
+                <li><strong style="color: var(--color-blue);">✓</strong> Auditoría de Foto de Perfil, Biografía e Historias Destacadas.</li>
+                <li><strong style="color: var(--color-blue);">✓</strong> Diseño de plantillas estratégicas y carruseles de alto impacto.</li>
+                <li><strong style="color: var(--color-blue);">✓</strong> Guía didáctica personalizada para gestionar tu feed.</li>
+              </ul>
+            </div>
+            <button type="button" class="btn-lw btn-lw--secondary" onclick="selectService('Optimización de Instagram & Feed')">
+              Optimizar mi Instagram →
+            </button>
+          </article>
+
+          <!-- Servicio 4: Diseño Web & Landing Pages -->
+          <article class="service-card">
+            <div>
+              <span class="service-number">Servicio 04 • Presencia Digital</span>
+              <h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 10px;">
+                Diseño Web & Landing Pages para Emprendedores
+              </h3>
+              <p style="font-size: 0.92rem; color: var(--color-muted);">
+                Llevamos la experiencia sensorial de tu marca a tu propio sitio web, estructurado para presentar tus servicios con autoridad y captar prospectos 24/7.
+              </p>
+              <ul class="service-list">
+                <li><strong style="color: var(--color-blue);">✓</strong> Estructura persuasiva (Inicio, Servicios, Casos y Contacto).</li>
+                <li><strong style="color: var(--color-blue);">✓</strong> Diseño adaptable a móviles (Responsive Design).</li>
+                <li><strong style="color: var(--color-blue);">✓</strong> Formularios conectados para agendar diagnósticos o ventas.</li>
+              </ul>
+            </div>
+            <button type="button" class="btn-lw btn-lw--secondary" onclick="selectService('Diseño Web & Landing Pages')">
+              Solicitar Diseño Web →
+            </button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 04: CASOS DE ÉXITO REALES (MR. GOLOSO, ORIES.ART, RAY'S BOARD, FEED)
+         ========================================================================== -->
+    <section id="casos-exito" class="portfolio-section">
+      <div class="container-lw">
+        
+        <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+          <div>
+            <span class="section-subtitle" style="color: #6B82FF;">04. Portafolio Real de Instagram</span>
+            <h2 class="section-title" style="color: #FFFFFF;">Casos de Éxito & Proyectos</h2>
+          </div>
+
+          <!-- Filtros simples con JS -->
+          <div class="filter-bar" role="tablist">
+            <button type="button" class="filter-btn active" onclick="filterCases('todos', this)">Todos (4)</button>
+            <button type="button" class="filter-btn" onclick="filterCases('branding', this)">Identidad & Brand Kit</button>
+            <button type="button" class="filter-btn" onclick="filterCases('estrategia', this)">Producto & Estrategia</button>
+          </div>
+        </div>
+
+        <div class="portfolio-grid">
+          
+          <!-- Caso Real 1: Mr. Goloso (Extraído del post DGd9w6Hg157) -->
+          <article class="case-card" data-category="branding">
+            <div>
+              <div class="case-visual" style="background: linear-gradient(135deg, #1A1A1A 0%, #3A0CA3 100%); color: #FFFFFF;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <span class="badge-lw" style="color: var(--color-black); font-size: 0.72rem;">#IdentidadVisual</span>
+                  <span style="font-family: var(--font-hand); font-size: 1.4rem;">🔥 Irresistible</span>
+                </div>
+                <div>
+                  <p style="font-size: 2rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1;">MR. GOLOSO</p>
+                  <span style="font-size: 0.8rem; opacity: 0.85;">Diseño de Logotipo & Personalidad de Marca</span>
+                </div>
+              </div>
+              <div class="case-body">
+                <h3 style="font-size: 1.3rem; font-weight: 900; margin-bottom: 8px;">
+                  Mr. Goloso: Identidad Atrevida y Controversial
+                </h3>
+                <p style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: 14px;">
+                  <strong>Reto y Solución:</strong> Crear una identidad gastronómica que rompiera esquemas tradicionales y despertara antojos al instante. Se desarrolló un logotipo con carácter audaz y alto impacto en redes.
+                </p>
+              </div>
+            </div>
+            <div style="padding: 0 24px 22px;">
+              <a href="https://www.instagram.com/p/DGd9w6Hg157/" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 800; color: var(--color-blue);">
+                Ver caso real en Instagram (@leuswork) ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Caso Real 2: @ories.art (Extraído del post DG9l-vggtOB) -->
+          <article class="case-card" data-category="branding">
+            <div>
+              <div class="case-visual" style="background: linear-gradient(135deg, #001AFF 0%, #0A0A0A 100%); color: #FFFFFF;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <span class="badge-lw" style="color: var(--color-black); font-size: 0.72rem;">Asesoría + Brand Kit</span>
+                  <span style="font-family: var(--font-hand); font-size: 1.4rem;">✨ Co-creación</span>
+                </div>
+                <div>
+                  <p style="font-size: 2rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1;">@ORIES.ART</p>
+                  <span style="font-size: 0.8rem; opacity: 0.85;">De la asesoría inicial a una marca con propósito</span>
+                </div>
+              </div>
+              <div class="case-body">
+                <h3 style="font-size: 1.3rem; font-weight: 900; margin-bottom: 8px;">
+                  Ories Art: De Idea a Brand Kit Estratégico
+                </h3>
+                <p style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: 14px;">
+                  <strong>Reto y Solución:</strong> Partiendo desde la asesoría inicial de @leuswork, convertimos la visión de la clienta en un Brand Kit completo, coherente y alineado con sus objetivos comerciales.
+                </p>
+              </div>
+            </div>
+            <div style="padding: 0 24px 22px;">
+              <a href="https://www.instagram.com/p/DG9l-vggtOB/" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 800; color: var(--color-blue);">
+                Ver caso real en Instagram (@leuswork) ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Caso Real 3: RAY'S BOARD (Extraído del post C1Gf4BuAB2I) -->
+          <article class="case-card" data-category="estrategia">
+            <div>
+              <div class="case-visual" style="background: linear-gradient(135deg, #0052D4 0%, #4364F7 50%, #6FB1FC 100%); color: #FFFFFF;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <span class="badge-lw" style="color: var(--color-black); font-size: 0.72rem;">Concepto & Producto</span>
+                  <span style="font-family: var(--font-hand); font-size: 1.4rem;">🌊 Por @dayanaanez</span>
+                </div>
+                <div>
+                  <p style="font-size: 2rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1;">RAY'S BOARD</p>
+                  <span style="font-size: 0.8rem; opacity: 0.9;">Identidad para producto acuático recreativo</span>
+                </div>
+              </div>
+              <div class="case-body">
+                <h3 style="font-size: 1.3rem; font-weight: 900; margin-bottom: 8px;">
+                  Ray's Board: Conceptualización Visual
+                </h3>
+                <p style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: 14px;">
+                  <strong>Reto y Solución:</strong> Proyecto liderado por la diseñadora Dayana Añez para una marca de productos acuáticos orientada a conectar tanto con público joven como familiar mediante un lenguaje fresco.
+                </p>
+              </div>
+            </div>
+            <div style="padding: 0 24px 22px;">
+              <a href="https://www.instagram.com/p/C1Gf4BuAB2I/" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 800; color: var(--color-blue);">
+                Ver caso real en Instagram (@leuswork) ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Caso Real 4: Guía Didáctica "Maestro de tu Feed" (Extraído del post DMBfNpYxnuZ) -->
+          <article class="case-card" data-category="estrategia">
+            <div>
+              <div class="case-visual" style="background-color: #F4F4F2; color: var(--color-black);">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <span class="badge-lw badge-lw--blue" style="font-size: 0.72rem;">Recurso Propio</span>
+                  <span style="font-family: var(--font-hand); font-size: 1.4rem; color: var(--color-blue);">🚀 Sistema Leuswork</span>
+                </div>
+                <div>
+                  <p style="font-size: 2rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1;">MAESTRO DE TU FEED</p>
+                  <span style="font-size: 0.8rem; color: var(--color-muted);">Guía didáctica y estructura para Instagram</span>
+                </div>
+              </div>
+              <div class="case-body">
+                <h3 style="font-size: 1.3rem; font-weight: 900; margin-bottom: 8px;">
+                  Guía Didáctica: Maestro de tu Feed
+                </h3>
+                <p style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: 14px;">
+                  <strong>Reto y Solución:</strong> Creación de una metodología propia para auditar foto de perfil, biografía e historias destacadas, permitiendo a emprendedores dominar la estética y estrategia de su feed.
+                </p>
+              </div>
+            </div>
+            <div style="padding: 0 24px 22px;">
+              <a href="https://www.instagram.com/p/DMBfNpYxnuZ/" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 800; color: var(--color-blue);">
+                Ver recurso en Instagram (@leuswork) ↗
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 05: CONTACTO & FORMULARIO DE DIAGNÓSTICO INICIAL GRATUITO
+         ========================================================================== -->
+    <section id="contacto" class="contact-section">
+      <div class="container-lw">
+        
+        <div class="contact-wrapper">
+          
+          <!-- Información lateral del Diagnóstico -->
+          <div class="contact-info">
+            <div>
+              <span class="badge-lw" style="color: var(--color-black); margin-bottom: 16px;">
+                05. Contacto Directo
+              </span>
+              <h2 style="font-size: 2.1rem; font-weight: 900; line-height: 1.1; margin-bottom: 14px;">
+                ¿Listo para darle un giro a tu marca? 🚀
+              </h2>
+              <p style="font-size: 0.95rem; opacity: 0.92; margin-bottom: 24px;">
+                Solicita tu <strong>Diagnóstico Inicial GRATIS</strong>. Revisaremos tu marca actual y te diremos qué ajustar para atraer y conectar con tu cliente ideal.
+              </p>
+
+              <div style="background-color: rgba(10, 10, 10, 0.25); border: 2px solid rgba(255,255,255,0.4); border-radius: var(--radius-md); padding: 18px; margin-bottom: 24px;">
+                <p style="font-family: var(--font-hand); font-size: 1.5rem; margin-bottom: 6px;">
+                  ¿Qué incluye tu diagnóstico?
+                </p>
+                <ul style="font-size: 0.88rem; display: flex; flex-direction: column; gap: 8px;">
+                  <li>1. Revisión de los primeros 3 segundos de tu perfil o marca.</li>
+                  <li>2. Detección de mejoras en identidad visual y mensaje.</li>
+                  <li>3. Recomendación del paso exacto según tu etapa actual.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="font-size: 0.88rem; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 16px;">
+              <p><strong>Instagram Oficial:</strong> <a href="https://www.instagram.com/leuswork/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">@leuswork</a></p>
+              <p><strong>Equipo:</strong> @dayanaanez & @axezpro</p>
+            </div>
+          </div>
+
+          <!-- Formulario Interactivo -->
+          <div class="contact-form-box">
+            <form id="diagnosticForm" novalidate>
+              <h3 style="font-size: 1.35rem; font-weight: 900; margin-bottom: 4px;">
+                Agenda tu Diagnóstico Inicial Gratuito
+              </h3>
+              <p style="font-size: 0.85rem; color: var(--color-muted); margin-bottom: 20px;">
+                Completa tus datos y nos pondremos en contacto contigo en menos de 24 horas.
+              </p>
+
+              <div class="form-group">
+                <label class="form-label" for="nombre">Tu Nombre Completo *</label>
+                <input type="text" id="nombre" class="form-input" placeholder="Ej. Valentina Gómez" required />
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                <div class="form-group">
+                  <label class="form-label" for="correo">Correo Electrónico *</label>
+                  <input type="email" id="correo" class="form-input" placeholder="tu@correo.com" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="instagram">Tu @Instagram o Marca *</label>
+                  <input type="text" id="instagram" class="form-input" placeholder="Ej. @mimarca" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="servicioInteres">Servicio de Mayor Interés *</label>
+                <select id="servicioInteres" class="form-select">
+                  <option value="Diagnóstico Inicial General">Quiero el Diagnóstico Inicial Gratuito para orientarme</option>
+                  <option value="Asesoría 2:1 & Buyer Persona">Asesoría 2:1 & Definición de Buyer Persona</option>
+                  <option value="Identidad Visual & Brand Kit">Identidad Visual & Brand Kit</option>
+                  <option value="Optimización de Instagram & Feed">Optimización de Instagram & Guía Maestro de tu Feed</option>
+                  <option value="Diseño Web & Landing Pages">Diseño Web & Landing Pages</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="mensaje">¿Cuál es el mayor reto de tu marca hoy? *</label>
+                <textarea id="mensaje" rows="3" class="form-textarea" placeholder="Cuéntanos brevemente a qué se dedica tu emprendimiento y qué te gustaría lograr..." required></textarea>
+              </div>
+
+              <div id="formError" style="display: none; background-color: #FEE2E2; border: 2px solid #DC2626; color: #991B1B; padding: 10px 14px; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 700; margin-bottom: 14px;">
+                Por favor completa todos los campos obligatorios (*) con un correo válido.
+              </div>
+
+              <button type="submit" class="btn-lw btn-lw--primary" style="width: 100%;">
+                Enviar Solicitud de Diagnóstico Gratis 🚀
+              </button>
+            </form>
+
+            <!-- Mensaje de Éxito al Enviar -->
+            <div id="formSuccess" style="display: none; text-align: center; padding: 32px 16px;">
+              <div style="width: 56px; height: 56px; border-radius: 50%; background-color: var(--color-blue); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; font-weight: 900; margin: 0 auto 16px; border: 2px solid var(--color-black);">
+                ✓
+              </div>
+              <h4 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 8px;">
+                ¡Solicitud Recibida con Éxito!
+              </h4>
+              <p id="successText" style="font-size: 0.92rem; color: var(--color-muted); margin-bottom: 20px;"></p>
+              <button type="button" class="btn-lw btn-lw--secondary" onclick="resetForm()">
+                Enviar otra solicitud
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+0
+  <footer class="site-footer">
+    <div class="container-lw" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+      <div>
+        <div class="brand-logo" style="font-size: 1.7rem;">
+          <span class="brand-logo__leus" style="color: #FFFFFF;">Leus</span>
+          <span class="brand-logo__work" style="font-size: 2rem;">work</span>
+          <span class="brand-logo__bang" style="color: #FFFFFF;">!</span>
+        </div>
+        <p style="font-size: 0.85rem; color: #A0A0A0; margin-top: 6px;">
+          Creatividad Estratégica • Diseño con Propósito por Dayana & Diana Añez.
+        </p>
+      </div>
+
+      <div style="display: flex; gap: 16px; font-size: 0.85rem; font-weight: 700;">
+        <a href="#inicio">Inicio</a>
+        <a href="#quienes-somos">Quiénes somos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#casos-exito">Casos de éxito</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <div style="font-size: 0.8rem; color: #888888;">
+        © 2026 Leuswork. Proyecto de Diseño Web hecho por Ryan Benitez.
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
