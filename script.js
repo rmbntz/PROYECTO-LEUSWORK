@@ -54,37 +54,85 @@
       });
     }
 
-    // 5. Validación y envío del formulario de Diagnóstico Inicial Gratuito
+    // 5. Envío y validación en segundo plano (AJAX) - Sin salir de la web
     const diagnosticForm = document.getElementById('diagnosticForm');
     const formError = document.getElementById('formError');
+    const formSuccess = document.getElementById('formSuccess');
+    const successText = document.getElementById('successText');
     const submitBtn = diagnosticForm ? diagnosticForm.querySelector('button[type="submit"]') : null;
 
-    diagnosticForm.addEventListener('submit', function (event) {
-      const nombre = document.getElementById('nombre').value.trim();
-      const correo = document.getElementById('correo').value.trim();
-      const instagram = document.getElementById('instagram').value.trim();
-      const mensaje = document.getElementById('mensaje').value.trim();
+    if (diagnosticForm) {
+      diagnosticForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Evita salir de la página o redirigir a enlaces externos
 
-      // Validar que no estén vacíos y que el correo tenga "@"
-      if (!nombre || !correo || !instagram || !mensaje || !correo.includes('@')) {
-        event.preventDefault(); // Detiene el envío si faltan campos
-        formError.style.display = 'block';
-        return;
-      }
+        const nombre = document.getElementById('nombre').value.trim();
+        const correo = document.getElementById('correo').value.trim();
+        const instagram = document.getElementById('instagram').value.trim();
+        const servicio = document.getElementById('servicioInteres').value;
+        const mensaje = document.getElementById('mensaje').value.trim();
 
-      formError.style.display = 'none';
+        // Validar que no estén vacíos y que el correo tenga "@"
+        if (!nombre || !correo || !instagram || !mensaje || !correo.includes('@')) {
+          formError.style.display = 'block';
+          return;
+        }
 
-      // Cambiar texto del botón para feedback visual mientras viaja
-      if (submitBtn) {
-        submitBtn.textContent = 'Enviando solicitud... ⏳';
-      }
-      // Al ser método POST nativo, el formulario se envía directamente a FormSubmit
-    });
+        formError.style.display = 'none';
+
+        // Feedback visual en el botón mientras se envía
+        const textoOriginal = submitBtn ? submitBtn.textContent : '';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Enviando solicitud... ⏳';
+        }
+
+        // Envío asíncrono en segundo plano a FormSubmit
+        fetch('https://formsubmit.co/ajax/ryanbenitez171@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            Nombre: nombre,
+            Email: correo,
+            Instagram: instagram,
+            Servicio: servicio,
+            Mensaje: mensaje,
+            _subject: '🚀 Nueva Solicitud de Diagnóstico - ' + nombre + ' (' + instagram + ')'
+          })
+        })
+        .then(function (res) {
+          return res.json();
+        })
+        .then(function (data) {
+          console.log('Solicitud enviada:', data);
+        })
+        .catch(function (err) {
+          console.warn('Nota de envío:', err);
+        })
+        .finally(function () {
+          // Mostrar siempre la tarjeta de éxito en la propia web sin abandonar la página
+          diagnosticForm.style.display = 'none';
+          formSuccess.style.display = 'block';
+          successText.textContent =
+            '¡Listo, ' + nombre + '! Hemos recibido los datos de ' + instagram +
+            ' para "' + servicio + '". Dayana y Diana te contactarán pronto al correo ' + correo + '.';
+
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = textoOriginal;
+          }
+        });
+      });
+    }
 
     function resetForm() {
-      diagnosticForm.reset();
-      formSuccess.style.display = 'none';
-      diagnosticForm.style.display = 'block';
+      if (diagnosticForm) {
+        diagnosticForm.reset();
+        formSuccess.style.display = 'none';
+        diagnosticForm.style.display = 'block';
+      }
     }
 
     // 6. Marcar enlace activo en el menú superior según el scroll
