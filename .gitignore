@@ -1,0 +1,7 @@
+# Archivos y materiales privados (no subir al repositorio público)
+presentacion.html
+*.docx
+*.doc
+GUIA_*
+README_PRESENTACION.*
+test_docx_build/
