@@ -735,8 +735,8 @@ ul {
 }
 
 .case-visual {
-  height: 220px;
-  padding: 24px;
+  min-height: 230px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -745,6 +745,57 @@ ul {
   overflow: hidden;
   background-size: cover;
   background-position: center;
+}
+
+.case-visual__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.case-visual__badge {
+  color: var(--color-black);
+  font-size: 0.72rem;
+  background: rgba(255, 255, 255, 0.95);
+  white-space: nowrap;
+}
+
+.case-visual__cursive {
+  font-family: var(--font-hand);
+  font-size: 1.45rem;
+  color: #FFFFFF;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  white-space: nowrap;
+}
+
+.case-visual__bottom {
+  margin-top: 24px;
+}
+
+.case-visual__title {
+  font-size: 1.85rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  color: #FFFFFF;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  margin-bottom: 4px;
+}
+
+.case-visual__subtitle {
+  font-size: 0.85rem;
+  color: #FFFFFF;
+  opacity: 0.95;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+
+.case-body__title {
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+  line-height: 1.25;
 }
 
 .case-visual__overlay {
@@ -930,25 +981,46 @@ ul {
 
   /* Ajustes móviles que garantizan legibilidad y visualización sin desbordes */
   .case-visual {
-    height: 230px;
-    padding: 16px 18px;
+    min-height: 220px;
+    height: auto;
+    padding: 16px 18px 20px;
   }
 
-  .case-visual p {
-    font-size: 1.4rem !important;
-    line-height: 1.15 !important;
+  .case-visual__top {
+    gap: 8px;
+    flex-wrap: wrap;
   }
 
-  .case-visual span[style*="font-size: 1.5rem"] {
-    font-size: 1.25rem !important;
+  .case-visual__badge {
+    padding: 4px 10px;
+    font-size: 0.68rem;
+    white-space: normal;
   }
 
-  .case-visual span[style*="font-size: 0.85rem"] {
-    font-size: 0.78rem !important;
+  .case-visual__cursive {
+    font-size: 1.25rem;
+  }
+
+  .case-visual__bottom {
+    margin-top: 20px;
+  }
+
+  .case-visual__title {
+    font-size: 1.35rem;
+    line-height: 1.15;
+  }
+
+  .case-visual__subtitle {
+    font-size: 0.78rem;
+    line-height: 1.3;
   }
 
   .case-body {
     padding: 18px 20px;
+  }
+
+  .case-body__title {
+    font-size: 1.2rem;
   }
 
   .filter-bar {
