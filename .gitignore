@@ -2,6 +2,7 @@
 presentacion.html
 *.docx
 *.doc
+*.txt
 GUIA_*
 README_PRESENTACION.*
 test_docx_build/

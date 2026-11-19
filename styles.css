@@ -4,38 +4,30 @@
        ========================================================================== */
 :root {
   --color-black: #0A0A0A;
-  /* Negro profundo del logotipo "Leus" y "!" */
   --color-blue: #001AFF;
-  /* Azul eléctrico original de "work" */
   --color-blue-hover: #0012B8;
-  /* Variante oscura para estados hover */
   --color-bg: #F7F7F5;
-  /* Blanco hueso / papel editorial limpio */
   --color-surface: #FFFFFF;
-  /* Blanco puro para tarjetas */
-  --color-text: #141414;
-  /* Texto principal de alto contraste */
-  --color-muted: #5A5A58;
-  /* Texto secundario */
+  --color-text: #111111;
+  --color-muted: #555555;
   --color-border: #0A0A0A;
-  /* Bordes definidos estilo editorial moderno */
   --color-purple: #6847FF;
   --color-purple-soft: #DCD7FF;
 
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-hand: 'Caveat', cursive;
 
-  --radius-sm: 10px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
   --radius-pill: 9999px;
 
-  --shadow-card: 5px 5px 0px #0A0A0A;
-  --shadow-blue: 5px 5px 0px #001AFF;
-  --shadow-sm: 3px 3px 0px #0A0A0A;
+  --shadow-card: 4px 4px 0px #0A0A0A;
+  --shadow-blue: 4px 4px 0px #001AFF;
+  --shadow-sm: 2px 2px 0px #0A0A0A;
 
   --max-width: 1160px;
-  --transition: all 0.2s ease-in-out;
+  --transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ==========================================================================
@@ -123,14 +115,14 @@ ul {
 .badge-lw {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   padding: 6px 14px;
   border-radius: var(--radius-pill);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  border: 2px solid var(--color-border);
+  letter-spacing: 0.06em;
+  border: 1.5px solid var(--color-border);
   background-color: var(--color-surface);
   box-shadow: var(--shadow-sm);
 }
@@ -140,29 +132,54 @@ ul {
   color: #FFFFFF;
 }
 
-/* Sticker editorial estilo calcomanía rotada (fácil de explicar: transform: rotate) */
+/* Indicador de pulso activo estilo Emil Kowalski */
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #00E599;
+  display: inline-block;
+  box-shadow: 0 0 0 2px rgba(0, 229, 153, 0.25);
+  animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.badge-lw--blue .status-dot {
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35);
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.85); }
+}
+
+/* Etiqueta editorial minimalista con inclinación refinada */
 .sticker-badge {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 5px 12px;
-  font-size: 0.75rem;
-  font-weight: 900;
+  gap: 6px;
+  padding: 4px 10px;
+  font-size: 0.72rem;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background-color: #FFE600;
-  /* Amarillo flúor estilo neo-brutalista */
-  color: var(--color-black);
-  border: 2px solid var(--color-border);
+  background-color: var(--color-black);
+  color: #FFFFFF;
+  border: 1.5px solid var(--color-border);
   border-radius: var(--radius-sm);
-  box-shadow: 3px 3px 0px var(--color-black);
-  transform: rotate(-6deg);
-  transition: transform 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  transform: rotate(-3deg);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
 }
 
 .sticker-badge:hover {
-  transform: rotate(0deg) scale(1.06);
+  transform: rotate(0deg) scale(1.03);
+}
+
+.sticker-badge--accent {
+  background-color: var(--color-blue);
+  color: #FFFFFF;
 }
 
 .btn-lw {
@@ -462,17 +479,20 @@ ul {
 .marquee-item {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  font-size: 0.88rem;
-  font-weight: 900;
+  gap: 16px;
+  font-size: 0.82rem;
+  font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.marquee-star {
-  color: #FFE600;
-  /* Amarillo flúor para contraste disruptivo */
-  font-size: 1rem;
+.marquee-divider {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--color-blue);
+  display: inline-block;
+  opacity: 0.85;
 }
 
 @keyframes marquee-scroll {

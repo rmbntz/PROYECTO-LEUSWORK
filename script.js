@@ -16,11 +16,11 @@
       const feedbackBox = document.getElementById('auditFeedbackBox');
 
       if (checkedCount === 0) {
-        feedbackBox.textContent = '✨ ¡Excelente base! Aun así, podemos ayudarte a escalar tus resultados al siguiente nivel.';
+        feedbackBox.textContent = 'Excelente base. Aun así, podemos ayudarte a escalar tus resultados al siguiente nivel.';
       } else if (checkedCount <= 2) {
-        feedbackBox.textContent = '💡 Tienes ' + checkedCount + ' punto(s) clave por optimizar. ¡Resolvámoslo en tu Diagnóstico Inicial Gratuito!';
+        feedbackBox.textContent = 'Tienes ' + checkedCount + ' punto(s) clave por optimizar. Podemos resolverlo en tu Diagnóstico Inicial.';
       } else {
-        feedbackBox.textContent = '🚨 Tu marca necesita estructura urgente (' + checkedCount + '/4 señales). ¡Agenda tu Diagnóstico Gratis hoy mismo!';
+        feedbackBox.textContent = 'Tu marca necesita estructura estratégica urgente (' + checkedCount + '/4 señales detectadas). Agenda tu Diagnóstico Inicial hoy mismo.';
       }
     }
 
@@ -83,7 +83,7 @@
         const textoOriginal = submitBtn ? submitBtn.textContent : '';
         if (submitBtn) {
           submitBtn.disabled = true;
-          submitBtn.textContent = 'Enviando solicitud... ⏳';
+          submitBtn.textContent = 'Enviando solicitud...';
         }
 
         // Envío asíncrono en segundo plano a Web3Forms
@@ -101,7 +101,7 @@
             Servicio: servicio,
             Mensaje: mensaje,
             from_name: 'Leuswork Web Leads',
-            subject: '🚀 Nueva Solicitud de Diagnóstico - ' + nombre + ' (' + instagram + ')'
+            subject: 'Nueva Solicitud de Diagnóstico - ' + nombre + ' (' + instagram + ')'
           })
         })
         .then(function (res) {
