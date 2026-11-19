@@ -54,34 +54,31 @@
       });
     }
 
-    // 5. Validación sencilla del formulario de Diagnóstico Inicial Gratuito
+    // 5. Validación y envío del formulario de Diagnóstico Inicial Gratuito
     const diagnosticForm = document.getElementById('diagnosticForm');
     const formError = document.getElementById('formError');
-    const formSuccess = document.getElementById('formSuccess');
-    const successText = document.getElementById('successText');
+    const submitBtn = diagnosticForm ? diagnosticForm.querySelector('button[type="submit"]') : null;
 
     diagnosticForm.addEventListener('submit', function (event) {
-      event.preventDefault(); // Evita que la página se recargue
-
       const nombre = document.getElementById('nombre').value.trim();
       const correo = document.getElementById('correo').value.trim();
       const instagram = document.getElementById('instagram').value.trim();
-      const servicio = document.getElementById('servicioInteres').value;
       const mensaje = document.getElementById('mensaje').value.trim();
 
       // Validar que no estén vacíos y que el correo tenga "@"
       if (!nombre || !correo || !instagram || !mensaje || !correo.includes('@')) {
+        event.preventDefault(); // Detiene el envío si faltan campos
         formError.style.display = 'block';
         return;
       }
 
       formError.style.display = 'none';
-      diagnosticForm.style.display = 'none';
-      formSuccess.style.display = 'block';
 
-      successText.textContent =
-        'Gracias ' + nombre + '. Hemos recibido los datos de ' + instagram +
-        ' para "' + servicio + '". Dayana y Diana te contactarán al correo ' + correo + '.';
+      // Cambiar texto del botón para feedback visual mientras viaja
+      if (submitBtn) {
+        submitBtn.textContent = 'Enviando solicitud... ⏳';
+      }
+      // Al ser método POST nativo, el formulario se envía directamente a FormSubmit
     });
 
     function resetForm() {
