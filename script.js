@@ -137,9 +137,9 @@
       }
     }
 
-    // 6. Marcar enlace activo en el menú superior según el scroll
+    // 6. Marcar enlace activo en el menú superior según el scroll (en orden de aparición en el DOM)
     window.addEventListener('scroll', function () {
-      const sections = ['inicio', 'quienes-somos', 'servicios', 'casos-exito', 'contacto'];
+      const sections = ['inicio', 'servicios', 'casos-exito', 'quienes-somos', 'contacto'];
       let currentSection = 'inicio';
 
       sections.forEach(function (id) {
