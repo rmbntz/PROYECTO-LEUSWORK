@@ -755,10 +755,16 @@ ul {
 }
 
 .case-visual__badge {
-  color: var(--color-black);
+  color: #0A0A0A !important;
   font-size: 0.72rem;
-  background: rgba(255, 255, 255, 0.95);
+  font-weight: 800;
+  background: #FFFFFF !important;
   white-space: nowrap;
+}
+
+.case-visual__badge.badge-lw--blue {
+  color: #FFFFFF !important;
+  background: var(--color-blue) !important;
 }
 
 .case-visual__cursive {
