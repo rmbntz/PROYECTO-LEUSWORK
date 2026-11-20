@@ -17,27 +17,11 @@
 
 <body>
 
-  <div class="top-bar">
-    <div class="container-lw top-bar__inner">
-      <div>
-        <span><strong style="color: var(--color-blue-soft);">Regla de los 3 segundos:</strong> Tu diseño define si conectan o siguen deslizando.</span>
-      </div>
-      <div>
-        <a href="https://www.instagram.com/leuswork/" target="_blank" rel="noopener noreferrer"
-          style="text-decoration: underline; font-weight: 700;">
-          Instagram @leuswork ↗
-        </a>
-      </div>
-    </div>
-  </div>
-
   <header class="site-header">
     <div class="container-lw site-header__inner">
 
       <a href="#inicio" class="brand-logo" aria-label="Leuswork Inicio">
-        <span class="brand-logo__leus">Leus</span>
-        <span class="brand-logo__work">work</span>
-        <span class="brand-logo__bang">!</span>
+        <img src="img/logo-leuswork.png" alt="Leuswork!" class="brand-logo__img" />
       </a>
 
       <nav class="main-nav" aria-label="Navegación principal">
@@ -49,13 +33,14 @@
       </nav>
 
       <div class="header-cta-desktop">
-        <a href="#contacto" class="btn-lw btn-lw--primary" style="padding: 10px 18px; font-size: 0.85rem;">
-          Hablemos →
+        <a href="#contacto" class="btn-lw btn-lw--primary" style="padding: 9px 18px; font-size: 0.85rem;">
+          <span>Hablemos</span>
+          <span class="btn-lw__circle" style="width: 22px; height: 22px; font-size: 0.72rem;">→</span>
         </a>
       </div>
 
       <button type="button" class="mobile-toggle" id="mobileMenuBtn" aria-label="Abrir menú móvil">
-        ☰ Menú
+        Menú
       </button>
     </div>
 
@@ -67,7 +52,8 @@
         <a href="#quienes-somos" class="main-nav__link" onclick="closeMobileMenu()">04. Quiénes somos</a>
         <a href="#contacto" class="main-nav__link" onclick="closeMobileMenu()">05. Contacto</a>
         <a href="#contacto" class="btn-lw btn-lw--primary" onclick="closeMobileMenu()" style="margin-top: 6px;">
-          Hablemos de tu marca →
+          <span>Hablemos de tu marca</span>
+          <span class="btn-lw__circle">→</span>
         </a>
       </div>
     </div>
@@ -76,6 +62,7 @@
   <main>
     <!-- 01. Inicio -->
     <section id="inicio" class="hero-section">
+      <div class="watermark-bg watermark-bg--hero" aria-hidden="true"></div>
       <div class="container-lw hero-grid">
 
         <div>
@@ -92,11 +79,13 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#contacto" class="btn-lw btn-lw--primary">
-              Hablemos de tu marca →
+            <a href="#evaluacion" class="btn-lw btn-lw--primary">
+              <span>Hacer Auto-Evaluación (20s)</span>
+              <span class="btn-lw__circle">↓</span>
             </a>
-            <a href="#casos-exito" class="btn-lw btn-lw--secondary">
-              Ver Casos de Éxito
+            <a href="#servicios" class="btn-lw btn-lw--secondary">
+              <span>Ver Servicios &amp; Planes</span>
+              <span class="btn-lw__circle">→</span>
             </a>
           </div>
 
@@ -110,7 +99,7 @@
           </div>
         </div>
 
-        <div class="audit-card">
+        <div class="audit-card" id="evaluacion">
           <span class="sticker-badge" style="position: absolute; top: -11px; right: 24px;">
             Diagnóstico Rápido
           </span>
@@ -160,84 +149,288 @@
       </div>
     </section>
 
-    <!-- Marquee -->
-    <div class="marquee-bar" aria-hidden="true">
-      <div class="marquee-track">
-        <span class="marquee-item"><span class="marquee-divider"></span> BRANDING SENSORIAL</span>
-        <span class="marquee-item"><span class="marquee-divider"></span> CASO @ORIES.ART</span>
-        <span class="marquee-item"><span class="marquee-divider"></span> PROYECTO RAY'S BOARD</span>
-        <span class="marquee-item"><span class="marquee-divider"></span> GUÍA MAESTRO DE TU FEED</span>
-        <span class="marquee-item"><span class="marquee-divider"></span> ASESORÍA CERCANA 2:1</span>
-        <span class="marquee-item"><span class="marquee-divider"></span> BRAND KITS CON PROPÓSITO</span>
-        <span class="marquee-item"><span class="marquee-divider"></span> BRANDING SENSORIAL</span>
-        <span class="marquee-item"><span class="marquee-divider"></span> CASO @ORIES.ART</span>
-        <span class="marquee-item"><span class="marquee-divider"></span> PROYECTO RAY'S BOARD</span>
-        <span class="marquee-item"><span class="marquee-divider"></span> GUÍA MAESTRO DE TU FEED</span>
-        <span class="marquee-item"><span class="marquee-divider"></span> ASESORÍA CERCANA 2:1</span>
-        <span class="marquee-item"><span class="marquee-divider"></span> BRAND KITS CON PROPÓSITO</span>
+    <!-- Reel Visual de Trabajos Reales (Showcase Editorial) -->
+    <section class="works-reel-section" aria-label="Showcase de Trabajos Reales">
+      <div class="works-reel-header">
+        <span class="badge-reel">Feed Real @leuswork</span>
+        <span>Estrategia visual, branding y diseño editorial en acción</span>
       </div>
-    </div>
+      <div class="works-reel-wrapper">
+        <div class="works-reel-track">
+          <!-- 1. El poder de tu identidad visual -->
+          <a href="https://www.instagram.com/p/DF2lw-Qgk6L/" target="_blank" rel="noopener noreferrer" class="works-reel-card">
+            <span class="works-reel-card__badge">Identidad</span>
+            <div class="works-reel-thumb">
+              <img src="img/post-identidad-01.jpg" alt="El poder de tu identidad visual — Leuswork" loading="lazy" />
+            </div>
+            <div class="works-reel-info">
+              <span class="works-reel-tag">Identidad Visual</span>
+              <span class="works-reel-title">El poder de tu identidad</span>
+              <span class="works-reel-sub">Post Oficial <span>@leuswork ↗</span></span>
+            </div>
+          </a>
+
+          <!-- 2. Branding Sensorial -->
+          <a href="https://www.instagram.com/p/DJ6w8UsomnM/" target="_blank" rel="noopener noreferrer" class="works-reel-card">
+            <span class="works-reel-card__badge">Sensorial</span>
+            <div class="works-reel-thumb">
+              <img src="img/post-sensorial-01.jpg" alt="El branding no es solo lo que ves — Leuswork" loading="lazy" />
+            </div>
+            <div class="works-reel-info">
+              <span class="works-reel-tag">Branding Sensorial</span>
+              <span class="works-reel-title">Tu marca también se siente</span>
+              <span class="works-reel-sub">Experiencia de Marca <span>↗</span></span>
+            </div>
+          </a>
+
+          <!-- 3. Optimización de Instagram (3 Segundos) -->
+          <a href="https://www.instagram.com/p/DGYiwJrgZE7/" target="_blank" rel="noopener noreferrer" class="works-reel-card">
+            <span class="works-reel-card__badge">Social Media</span>
+            <div class="works-reel-thumb">
+              <img src="img/post-feed-01.jpg" alt="Tu feed está hablando — Leuswork" loading="lazy" />
+            </div>
+            <div class="works-reel-info">
+              <span class="works-reel-tag">Estructura de Feed</span>
+              <span class="works-reel-title">Tu perfil en 3 segundos</span>
+              <span class="works-reel-sub">Regla 3 Segundos <span>↗</span></span>
+            </div>
+          </a>
+
+          <!-- 4. Crea contenido sin estrés (Proceso claro) -->
+          <a href="https://www.instagram.com/p/DGRq0TUMPeO/" target="_blank" rel="noopener noreferrer" class="works-reel-card">
+            <span class="works-reel-card__badge">Estrategia</span>
+            <div class="works-reel-thumb">
+              <img src="img/post-algoritmo-01.jpg" alt="El algoritmo no es tu enemigo — Leuswork" loading="lazy" />
+            </div>
+            <div class="works-reel-info">
+              <span class="works-reel-tag">Estrategia Digital</span>
+              <span class="works-reel-title">Crea contenido sin estrés</span>
+              <span class="works-reel-sub">Diseño con Propósito <span>↗</span></span>
+            </div>
+          </a>
+
+          <!-- 5. Elementos Clave de Identidad -->
+          <a href="https://www.instagram.com/p/DF2lw-Qgk6L/" target="_blank" rel="noopener noreferrer" class="works-reel-card">
+            <span class="works-reel-card__badge">Brand Kit</span>
+            <div class="works-reel-thumb">
+              <img src="img/post-identidad-03.jpg" alt="Elementos clave de la identidad visual — Leuswork" loading="lazy" />
+            </div>
+            <div class="works-reel-info">
+              <span class="works-reel-tag">Sistema Gráfico</span>
+              <span class="works-reel-title">Elementos Clave de Marca</span>
+              <span class="works-reel-sub">Logo, Color &amp; Tipo <span>↗</span></span>
+            </div>
+          </a>
+
+          <!-- 6. Experiencia Sensorial Única -->
+          <a href="https://www.instagram.com/p/DJ6w8UsomnM/" target="_blank" rel="noopener noreferrer" class="works-reel-card">
+            <span class="works-reel-card__badge">Espacios</span>
+            <div class="works-reel-thumb">
+              <img src="img/post-sensorial-03.jpg" alt="Crea una experiencia sensorial única — Leuswork" loading="lazy" />
+            </div>
+            <div class="works-reel-info">
+              <span class="works-reel-tag">Branding Espacial</span>
+              <span class="works-reel-title">Aroma, textura &amp; luz</span>
+              <span class="works-reel-sub">Conexión Emocional <span>↗</span></span>
+            </div>
+          </a>
+
+          <!-- 7. Maestro de tu Feed (Guía didáctica) -->
+          <a href="https://www.instagram.com/p/DMBfNpYxnuZ/" target="_blank" rel="noopener noreferrer" class="works-reel-card">
+            <span class="works-reel-card__badge">Auditoría</span>
+            <div class="works-reel-thumb">
+              <img src="img/post-feed-02.jpg" alt="Un feed desordenado puede hacerte invisible — Leuswork" loading="lazy" />
+            </div>
+            <div class="works-reel-info">
+              <span class="works-reel-tag">Diagnóstico Visual</span>
+              <span class="works-reel-title">Maestro de tu Feed</span>
+              <span class="works-reel-sub">Guía Didáctica <span>↗</span></span>
+            </div>
+          </a>
+
+          <!-- 8. Diferenciación Visual: ¿Cómo te diferencias? -->
+          <a href="https://www.instagram.com/p/DIUg0CJyzLH/" target="_blank" rel="noopener noreferrer" class="works-reel-card">
+            <span class="works-reel-card__badge">Comunidad</span>
+            <div class="works-reel-thumb">
+              <img src="img/post-algoritmo-02.jpg" alt="Crece con intención más allá de los likes — Leuswork" loading="lazy" />
+            </div>
+            <div class="works-reel-info">
+              <span class="works-reel-tag">Diferenciación</span>
+              <span class="works-reel-title">¿Cómo te diferencias?</span>
+              <span class="works-reel-sub">Crece con Intención <span>↗</span></span>
+            </div>
+          </a>
+
+          <!-- DUPLICADOS EXACTOS PARA BUCLE INFINITO CONTINUO (16 CARDS) -->
+          <a href="https://www.instagram.com/p/DF2lw-Qgk6L/" target="_blank" rel="noopener noreferrer" class="works-reel-card" aria-hidden="true">
+            <span class="works-reel-card__badge">Identidad</span>
+            <div class="works-reel-thumb">
+              <img src="img/post-identidad-01.jpg" alt="El poder de tu identidad visual — Leuswork" loading="lazy" />
+            </div>
+            <div class="works-reel-info">
+              <span class="works-reel-tag">Identidad Visual</span>
+              <span class="works-reel-title">El poder de tu identidad</span>
+              <span class="works-reel-sub">Post Oficial <span>@leuswork ↗</span></span>
+            </div>
+          </a>
+
+          <a href="https://www.instagram.com/p/DJ6w8UsomnM/" target="_blank" rel="noopener noreferrer" class="works-reel-card" aria-hidden="true">
+            <span class="works-reel-card__badge">Sensorial</span>
+            <div class="works-reel-thumb">
+              <img src="img/post-sensorial-01.jpg" alt="El branding no es solo lo que ves — Leuswork" loading="lazy" />
+            </div>
+            <div class="works-reel-info">
+              <span class="works-reel-tag">Branding Sensorial</span>
+              <span class="works-reel-title">Tu marca también se siente</span>
+              <span class="works-reel-sub">Experiencia de Marca <span>↗</span></span>
+            </div>
+          </a>
+
+          <a href="https://www.instagram.com/p/DGYiwJrgZE7/" target="_blank" rel="noopener noreferrer" class="works-reel-card" aria-hidden="true">
+            <span class="works-reel-card__badge">Social Media</span>
+            <div class="works-reel-thumb">
+              <img src="img/post-feed-01.jpg" alt="Tu feed está hablando — Leuswork" loading="lazy" />
+            </div>
+            <div class="works-reel-info">
+              <span class="works-reel-tag">Estructura de Feed</span>
+              <span class="works-reel-title">Tu perfil en 3 segundos</span>
+              <span class="works-reel-sub">Regla 3 Segundos <span>↗</span></span>
+            </div>
+          </a>
+
+          <a href="https://www.instagram.com/p/DGRq0TUMPeO/" target="_blank" rel="noopener noreferrer" class="works-reel-card" aria-hidden="true">
+            <span class="works-reel-card__badge">Estrategia</span>
+            <div class="works-reel-thumb">
+              <img src="img/post-algoritmo-01.jpg" alt="El algoritmo no es tu enemigo — Leuswork" loading="lazy" />
+            </div>
+            <div class="works-reel-info">
+              <span class="works-reel-tag">Estrategia Digital</span>
+              <span class="works-reel-title">Crea contenido sin estrés</span>
+              <span class="works-reel-sub">Diseño con Propósito <span>↗</span></span>
+            </div>
+          </a>
+
+          <a href="https://www.instagram.com/p/DF2lw-Qgk6L/" target="_blank" rel="noopener noreferrer" class="works-reel-card" aria-hidden="true">
+            <span class="works-reel-card__badge">Brand Kit</span>
+            <div class="works-reel-thumb">
+              <img src="img/post-identidad-03.jpg" alt="Elementos clave de la identidad visual — Leuswork" loading="lazy" />
+            </div>
+            <div class="works-reel-info">
+              <span class="works-reel-tag">Sistema Gráfico</span>
+              <span class="works-reel-title">Elementos Clave de Marca</span>
+              <span class="works-reel-sub">Logo, Color &amp; Tipo <span>↗</span></span>
+            </div>
+          </a>
+
+          <a href="https://www.instagram.com/p/DJ6w8UsomnM/" target="_blank" rel="noopener noreferrer" class="works-reel-card" aria-hidden="true">
+            <span class="works-reel-card__badge">Espacios</span>
+            <div class="works-reel-thumb">
+              <img src="img/post-sensorial-03.jpg" alt="Crea una experiencia sensorial única — Leuswork" loading="lazy" />
+            </div>
+            <div class="works-reel-info">
+              <span class="works-reel-tag">Branding Espacial</span>
+              <span class="works-reel-title">Aroma, textura &amp; luz</span>
+              <span class="works-reel-sub">Conexión Emocional <span>↗</span></span>
+            </div>
+          </a>
+
+          <a href="https://www.instagram.com/p/DMBfNpYxnuZ/" target="_blank" rel="noopener noreferrer" class="works-reel-card" aria-hidden="true">
+            <span class="works-reel-card__badge">Auditoría</span>
+            <div class="works-reel-thumb">
+              <img src="img/post-feed-02.jpg" alt="Un feed desordenado puede hacerte invisible — Leuswork" loading="lazy" />
+            </div>
+            <div class="works-reel-info">
+              <span class="works-reel-tag">Diagnóstico Visual</span>
+              <span class="works-reel-title">Maestro de tu Feed</span>
+              <span class="works-reel-sub">Guía Didáctica <span>↗</span></span>
+            </div>
+          </a>
+
+          <a href="https://www.instagram.com/p/DIUg0CJyzLH/" target="_blank" rel="noopener noreferrer" class="works-reel-card" aria-hidden="true">
+            <span class="works-reel-card__badge">Comunidad</span>
+            <div class="works-reel-thumb">
+              <img src="img/post-algoritmo-02.jpg" alt="Crece con intención más allá de los likes — Leuswork" loading="lazy" />
+            </div>
+            <div class="works-reel-info">
+              <span class="works-reel-tag">Diferenciación</span>
+              <span class="works-reel-title">¿Cómo te diferencias?</span>
+              <span class="works-reel-sub">Crece con Intención <span>↗</span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- 02. Servicios -->
     <section id="servicios" class="services-section">
+      <div class="watermark-bg watermark-bg--services" aria-hidden="true"></div>
       <div class="container-lw">
 
         <div class="section-header"
           style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px;">
           <div>
-            <span class="section-subtitle">02. Nuestros Servicios</span>
-            <h2 class="section-title">Soluciones para que tu marca destaque</h2>
+            <span class="section-subtitle">02. Servicios &amp; Planes</span>
+            <h2 class="section-title">Elige la solución que tu marca necesita</h2>
           </div>
           <p style="max-width: 440px; font-size: 0.92rem; color: var(--color-muted);">
-            Diseño estratégico y sistemas visuales creados para comunicar valor y vender sin sobreexplicar.
+            Diferenciación clara de entregables. Descubre qué incluye y qué no incluye cada plan según tu etapa.
           </p>
         </div>
 
         <div class="services-grid">
 
-          <article class="service-card service-card--featured">
-            <span class="sticker-badge sticker-badge--accent"
-              style="position: absolute; top: -11px; right: 24px; transform: rotate(3deg);">
-              Más Solicitado
-            </span>
-            <div>
-              <span class="service-number"
-                style="border-color: var(--color-blue); background-color: var(--color-blue); color: #FFFFFF;">
-                Servicio 01 • Identidad Visual
-              </span>
-              <h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 10px;">
-                Identidad Visual & Brand Kit con Propósito
-              </h3>
-              <p style="font-size: 0.92rem; color: #D4D4D4;">
-                Transformamos tu visión en una identidad visual memorable que cuenta tu historia, transmite confianza y te diferencia en el mercado.
-              </p>
-              <ul class="service-list" style="color: #EFEFEF;">
-                <li><strong style="color: #5C73FF;">✓</strong> Logotipo principal y sistemas de variación.</li>
-                <li><strong style="color: #5C73FF;">✓</strong> Paleta de colores psicológica y tipografías.</li>
-                <li><strong style="color: #5C73FF;">✓</strong> Brand Kit entregable listo para aplicar en tus canales.</li>
-              </ul>
-            </div>
-            <div class="service-tags">
-              <span class="service-tag">Logotipo Principal</span>
-              <span class="service-tag">Paleta & Tipografía</span>
-              <span class="service-tag">Brand Kit Completo</span>
-            </div>
-          </article>
-
+          <!-- Servicio 01: Asesoría 2:1 -->
           <article class="service-card">
             <div>
-              <span class="service-number">Servicio 02 • Estrategia 2:1</span>
-              <h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 10px;">
-                Asesoría 2:1 & Definición de Buyer Persona
+              <span class="service-number">Servicio 01 • Estrategia Base</span>
+              <h3 style="font-size: 1.45rem; font-weight: 900; margin-bottom: 8px;">
+                Asesoría 2:1 &amp; Buyer Persona
               </h3>
-              <p style="font-size: 0.92rem; color: var(--color-muted);">
-                Sesión práctica con Dayana y Diana para ordenar tu mensaje comercial, definir a quién le vendes y estructurar tu contenido sin improvisar.
+              <p style="font-size: 0.88rem; color: var(--color-muted); margin-bottom: 14px;">
+                Sesión práctica con Dayana y Diana para ordenar tu mensaje comercial, definir a quién le vendes y construir tu ruta de contenido.
               </p>
-              <ul class="service-list">
-                <li><strong style="color: var(--color-blue);">✓</strong> Retrato práctico de tu Buyer Persona.</li>
-                <li><strong style="color: var(--color-blue);">✓</strong> Pilares de contenido claros y aplicables.</li>
-                <li><strong style="color: var(--color-blue);">✓</strong> Enfoque de comunicación y objetivos de venta.</li>
-              </ul>
+
+              <div class="plan-group">
+                <div class="plan-group-title plan-group-title--included">
+                  <span>✓</span> Lo que incluye este plan:
+                </div>
+                <ul class="feature-list">
+                  <li class="feature-item feature-item--included">
+                    <span class="feature-icon">✓</span>
+                    <span>Sesión intensiva 2:1 en vivo con Dayana y Diana.</span>
+                  </li>
+                  <li class="feature-item feature-item--included">
+                    <span class="feature-icon">✓</span>
+                    <span>Retrato práctico de tu Buyer Persona (cliente ideal).</span>
+                  </li>
+                  <li class="feature-item feature-item--included">
+                    <span class="feature-icon">✓</span>
+                    <span>Definición de 3 pilares temáticos de contenido.</span>
+                  </li>
+                  <li class="feature-item feature-item--included">
+                    <span class="feature-icon">✓</span>
+                    <span>Diagnóstico de mensaje y biografía comercial.</span>
+                  </li>
+                </ul>
+
+                <div class="plan-group-title plan-group-title--excluded">
+                  <span>✕</span> No incluye:
+                </div>
+                <ul class="feature-list">
+                  <li class="feature-item feature-item--excluded">
+                    <span class="feature-icon">✕</span>
+                    <span>Sin diseño de logotipo ni vectores (incluido en Brand Kit).</span>
+                  </li>
+                  <li class="feature-item feature-item--excluded">
+                    <span class="feature-icon">✕</span>
+                    <span>Sin plantillas editables para el feed.</span>
+                  </li>
+                  <li class="feature-item feature-item--excluded">
+                    <span class="feature-icon">✕</span>
+                    <span>Sin desarrollo de página web.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="service-tags">
               <span class="service-tag">Sesión en Vivo 2:1</span>
@@ -246,20 +439,58 @@
             </div>
           </article>
 
+          <!-- Servicio 02: Optimización de Perfil -->
           <article class="service-card">
             <div>
-              <span class="service-number">Servicio 03 • Social Media</span>
-              <h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 10px;">
-                Optimización de Perfil & "Maestro de tu Feed"
+              <span class="service-number">Servicio 02 • Social Media</span>
+              <h3 style="font-size: 1.45rem; font-weight: 900; margin-bottom: 8px;">
+                Optimización de Perfil &amp; "Maestro de tu Feed"
               </h3>
-              <p style="font-size: 0.92rem; color: var(--color-muted);">
-                Tu Instagram es tu escaparate digital. Alineamos foto, biografía y piezas gráficas para conquistar clientes en los primeros 3 segundos.
+              <p style="font-size: 0.88rem; color: var(--color-muted); margin-bottom: 14px;">
+                Tu Instagram es tu escaparate digital. Alineamos foto, biografía y piezas gráficas para conquistar clientes en 3 segundos.
               </p>
-              <ul class="service-list">
-                <li><strong style="color: var(--color-blue);">✓</strong> Auditoría de biografía, foto e historias destacadas.</li>
-                <li><strong style="color: var(--color-blue);">✓</strong> Plantillas y carruseles de alto impacto.</li>
-                <li><strong style="color: var(--color-blue);">✓</strong> Metodología didáctica "Maestro de tu Feed".</li>
-              </ul>
+
+              <div class="plan-group">
+                <div class="plan-group-title plan-group-title--included">
+                  <span>✓</span> Lo que incluye este plan:
+                </div>
+                <ul class="feature-list">
+                  <li class="feature-item feature-item--included">
+                    <span class="feature-icon">✓</span>
+                    <span>Auditoría de los 3 segundos (foto, bio, destacadas).</span>
+                  </li>
+                  <li class="feature-item feature-item--included">
+                    <span class="feature-icon">✓</span>
+                    <span>Pack de plantillas editables (posts y carruseles).</span>
+                  </li>
+                  <li class="feature-item feature-item--included">
+                    <span class="feature-icon">✓</span>
+                    <span>Portadas personalizadas para historias destacadas.</span>
+                  </li>
+                  <li class="feature-item feature-item--included">
+                    <span class="feature-icon">✓</span>
+                    <span>Metodología didáctica "Maestro de tu Feed".</span>
+                  </li>
+                </ul>
+
+                <div class="plan-group-title plan-group-title--excluded">
+                  <span>✕</span> No incluye:
+                </div>
+                <ul class="feature-list">
+                  <li class="feature-item feature-item--excluded">
+                    <span class="feature-icon">✕</span>
+                    <span>Sin diseño de logotipo desde cero (requiere Brand Kit).</span>
+                  </li>
+                  <li class="feature-item feature-item--excluded">
+                    <span class="feature-icon">✕</span>
+                    <span>Sin gestión mensual de publicaciones (Community Management).</span>
+                  </li>
+                  <li class="feature-item feature-item--excluded">
+                    <span class="feature-icon">✕</span>
+                    <span>Sin plataforma web.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="service-tags">
               <span class="service-tag">Auditoría Visual</span>
@@ -268,20 +499,121 @@
             </div>
           </article>
 
+          <!-- Servicio 03: Identidad Visual & Brand Kit (Destacado) -->
+          <article class="service-card service-card--featured">
+            <span class="sticker-badge sticker-badge--accent"
+              style="position: absolute; top: -11px; right: 24px; transform: rotate(3deg);">
+              Más Solicitado
+            </span>
+            <div>
+              <span class="service-number"
+                style="border-color: var(--color-blue); background-color: var(--color-blue); color: #FFFFFF;">
+                Servicio 03 • Más Solicitado
+              </span>
+              <h3 style="font-size: 1.45rem; font-weight: 900; margin-bottom: 8px;">
+                Identidad Visual &amp; Brand Kit con Propósito
+              </h3>
+              <p style="font-size: 0.88rem; color: #D4D4D4; margin-bottom: 14px;">
+                Transformamos tu visión en una identidad visual memorable que cuenta tu historia, transmite confianza y te diferencia en el mercado.
+              </p>
+
+              <div class="plan-group">
+                <div class="plan-group-title plan-group-title--included">
+                  <span>✓</span> Lo que incluye este plan:
+                </div>
+                <ul class="feature-list">
+                  <li class="feature-item feature-item--included">
+                    <span class="feature-icon">✓</span>
+                    <span>Logotipo principal, secundario y submarca vectoriales.</span>
+                  </li>
+                  <li class="feature-item feature-item--included">
+                    <span class="feature-icon">✓</span>
+                    <span>Paleta de colores psicológica (HEX, RGB y CMYK).</span>
+                  </li>
+                  <li class="feature-item feature-item--included">
+                    <span class="feature-icon">✓</span>
+                    <span>Jerarquía tipográfica comercial para redes y web.</span>
+                  </li>
+                  <li class="feature-item feature-item--included">
+                    <span class="feature-icon">✓</span>
+                    <span>Brand Kit descargable listo para tus canales.</span>
+                  </li>
+                  <li class="feature-item feature-item--included">
+                    <span class="feature-icon">✓</span>
+                    <span>Asesoría de entrega 2:1 para implementación correcta.</span>
+                  </li>
+                </ul>
+
+                <div class="plan-group-title plan-group-title--excluded">
+                  <span>✕</span> No incluye:
+                </div>
+                <ul class="feature-list">
+                  <li class="feature-item feature-item--excluded">
+                    <span class="feature-icon">✕</span>
+                    <span>Sin programación ni maquetación web (incluido en Diseño Web).</span>
+                  </li>
+                  <li class="feature-item feature-item--excluded">
+                    <span class="feature-icon">✕</span>
+                    <span>Sin redacción ni creación mensual de contenidos.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="service-tags">
+              <span class="service-tag">Logotipo Principal</span>
+              <span class="service-tag">Paleta &amp; Tipografía</span>
+              <span class="service-tag">Brand Kit Completo</span>
+            </div>
+          </article>
+
+          <!-- Servicio 04: Diseño Web & Landing Pages -->
           <article class="service-card">
             <div>
               <span class="service-number">Servicio 04 • Presencia Digital</span>
-              <h3 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 10px;">
-                Diseño Web & Landing Pages
+              <h3 style="font-size: 1.45rem; font-weight: 900; margin-bottom: 8px;">
+                Diseño Web &amp; Landing Pages para Emprendedores
               </h3>
-              <p style="font-size: 0.92rem; color: var(--color-muted);">
+              <p style="font-size: 0.88rem; color: var(--color-muted); margin-bottom: 14px;">
                 Una plataforma web moderna, rápida y persuasiva, diseñada para exhibir tus servicios con autoridad y captar prospectos en automático.
               </p>
-              <ul class="service-list">
-                <li><strong style="color: var(--color-blue);">✓</strong> Arquitectura comercial adaptada a móviles.</li>
-                <li><strong style="color: var(--color-blue);">✓</strong> Identidad visual aplicada a la experiencia web.</li>
-                <li><strong style="color: var(--color-blue);">✓</strong> Formulario de captación conectado.</li>
-              </ul>
+
+              <div class="plan-group">
+                <div class="plan-group-title plan-group-title--included">
+                  <span>✓</span> Lo que incluye este plan:
+                </div>
+                <ul class="feature-list">
+                  <li class="feature-item feature-item--included">
+                    <span class="feature-icon">✓</span>
+                    <span>Landing page comercial (100% responsive móvil/PC).</span>
+                  </li>
+                  <li class="feature-item feature-item--included">
+                    <span class="feature-icon">✓</span>
+                    <span>Aplicación integral de tu identidad visual en código nativo.</span>
+                  </li>
+                  <li class="feature-item feature-item--included">
+                    <span class="feature-icon">✓</span>
+                    <span>Formulario asíncrono conectado directo a tu correo.</span>
+                  </li>
+                  <li class="feature-item feature-item--included">
+                    <span class="feature-icon">✓</span>
+                    <span>Carga ultrarrápida (&lt;1s), accesibilidad y SEO base.</span>
+                  </li>
+                </ul>
+
+                <div class="plan-group-title plan-group-title--excluded">
+                  <span>✕</span> No incluye:
+                </div>
+                <ul class="feature-list">
+                  <li class="feature-item feature-item--excluded">
+                    <span class="feature-icon">✕</span>
+                    <span>Sin costos de dominio personalizado ni hosting anual.</span>
+                  </li>
+                  <li class="feature-item feature-item--excluded">
+                    <span class="feature-icon">✕</span>
+                    <span>Sin redacción de textos desde cero (requiere material base).</span>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="service-tags">
               <span class="service-tag">Diseño Responsive</span>
@@ -333,22 +665,38 @@
                 </div>
                 <div class="case-visual__bottom">
                   <p class="case-visual__title">BRANDING SENSORIAL</p>
-                  <span class="case-visual__subtitle">Identidad & Experiencia en Espacios Físicos</span>
+                  <span class="case-visual__subtitle">Identidad &amp; Espacios Físicos</span>
                 </div>
               </div>
               <div class="case-body">
                 <h3 class="case-body__title">
-                  Branding Sensorial: Más Allá de lo Visual
+                  Branding Sensorial: Más Allá de la Pantalla
                 </h3>
-                <p style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: 14px;">
-                  Sistemas de identidad aplicados a espacios físicos, texturas y aromas para que el cliente viva tu marca con todos los sentidos.
-                </p>
+                <div class="case-study-details">
+                  <div class="case-study-item">
+                    <strong>Reto</strong>
+                    <span>Llevar el diseño gráfico a un plano tangible donde el cliente viva la marca con todos los sentidos.</span>
+                  </div>
+                  <div class="case-study-item">
+                    <strong>Solución</strong>
+                    <span>Sistemas de identidad aplicados a aromas, texturas, señalética y ambientación espacial coherente.</span>
+                  </div>
+                  <div class="case-study-item">
+                    <strong>Impacto</strong>
+                    <span>Conexión emocional inmediata que eleva la percepción de valor y estancia del cliente.</span>
+                  </div>
+                </div>
+                <div class="case-study-tags">
+                  <span class="case-study-tag">Branding Espacial</span>
+                  <span class="case-study-tag">Identidad Sensorial</span>
+                  <span class="case-study-tag">Experiencia de Marca</span>
+                </div>
               </div>
             </div>
             <div style="padding: 0 24px 22px;">
               <a href="https://www.instagram.com/p/DJ6w8UsomnM/" target="_blank" rel="noopener noreferrer"
-                style="font-size: 0.85rem; font-weight: 800; color: var(--color-blue);">
-                Ver caso en Instagram (@leuswork) ↗
+                class="case-link-text">
+                Ver caso completo en Instagram ↗
               </a>
             </div>
           </article>
@@ -362,22 +710,38 @@
                 </div>
                 <div class="case-visual__bottom">
                   <p class="case-visual__title">@ORIES.ART</p>
-                  <span class="case-visual__subtitle">De la asesoría inicial a una marca con propósito</span>
+                  <span class="case-visual__subtitle">De la idea a una marca con propósito</span>
                 </div>
               </div>
               <div class="case-body">
                 <h3 class="case-body__title">
-                  Ories Art: De Idea a Brand Kit Estratégico
+                  Ories Art: Brand Kit Estratégico
                 </h3>
-                <p style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: 14px;">
-                  De la asesoría inicial de @leuswork a un Brand Kit completo, coherente y listo para conectar con su público objetivo.
-                </p>
+                <div class="case-study-details">
+                  <div class="case-study-item">
+                    <strong>Reto</strong>
+                    <span>Proyecto artístico y artesanal con presencia dispersa que no reflejaba el auténtico valor de sus piezas.</span>
+                  </div>
+                  <div class="case-study-item">
+                    <strong>Solución</strong>
+                    <span>Asesoría 2:1 para definir esencia, paleta armónica, tipografías y Brand Kit listo para empaques y redes.</span>
+                  </div>
+                  <div class="case-study-item">
+                    <strong>Impacto</strong>
+                    <span>Imagen coherente y profesional que proyecta autoridad artística y confianza comercial.</span>
+                  </div>
+                </div>
+                <div class="case-study-tags">
+                  <span class="case-study-tag">Brand Kit Completo</span>
+                  <span class="case-study-tag">Logotipo Vectorial</span>
+                  <span class="case-study-tag">Asesoría 2:1</span>
+                </div>
               </div>
             </div>
             <div style="padding: 0 24px 22px;">
               <a href="https://www.instagram.com/p/DG9l-vggtOB/" target="_blank" rel="noopener noreferrer"
-                style="font-size: 0.85rem; font-weight: 800; color: var(--color-blue);">
-                Ver caso en Instagram (@leuswork) ↗
+                class="case-link-text">
+                Ver caso completo en Instagram ↗
               </a>
             </div>
           </article>
@@ -386,7 +750,7 @@
             <div>
               <div class="case-visual case-visual--rays">
                 <div class="case-visual__top">
-                  <span class="badge-lw case-visual__badge">Concepto & Producto</span>
+                  <span class="badge-lw case-visual__badge">Concepto &amp; Producto</span>
                   <span class="case-visual__cursive">Por @dayanaanez</span>
                 </div>
                 <div class="case-visual__bottom">
@@ -398,15 +762,31 @@
                 <h3 class="case-body__title">
                   Ray's Board: Conceptualización Visual
                 </h3>
-                <p style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: 14px;">
-                  Identidad visual fresca y lenguaje dinámico para una marca de productos recreativos acuáticos liderada por Dayana Añez.
-                </p>
+                <div class="case-study-details">
+                  <div class="case-study-item">
+                    <strong>Reto</strong>
+                    <span>Crear una marca atractiva para un producto acuático que conecte con público joven y familiar.</span>
+                  </div>
+                  <div class="case-study-item">
+                    <strong>Solución</strong>
+                    <span>Desarrollo de lenguaje gráfico fresco, tipografía dinámica y sistema visual aplicado al producto físico por Dayana Añez.</span>
+                  </div>
+                  <div class="case-study-item">
+                    <strong>Impacto</strong>
+                    <span>Diferenciación inmediata en el sector recreativo con una personalidad memorable y versátil.</span>
+                  </div>
+                </div>
+                <div class="case-study-tags">
+                  <span class="case-study-tag">Diseño de Producto</span>
+                  <span class="case-study-tag">Concepto Visual</span>
+                  <span class="case-study-tag">Packaging</span>
+                </div>
               </div>
             </div>
             <div style="padding: 0 24px 22px;">
               <a href="https://www.instagram.com/p/C1Gf4BuAB2I/" target="_blank" rel="noopener noreferrer"
-                style="font-size: 0.85rem; font-weight: 800; color: var(--color-blue);">
-                Ver caso en Instagram (@leuswork) ↗
+                class="case-link-text">
+                Ver caso completo en Instagram ↗
               </a>
             </div>
           </article>
@@ -420,22 +800,38 @@
                 </div>
                 <div class="case-visual__bottom">
                   <p class="case-visual__title">MAESTRO DE TU FEED</p>
-                  <span class="case-visual__subtitle">Guía didáctica y estructura para Instagram</span>
+                  <span class="case-visual__subtitle">Metodología propia para Instagram</span>
                 </div>
               </div>
               <div class="case-body">
                 <h3 class="case-body__title">
                   Guía Didáctica: Maestro de tu Feed
                 </h3>
-                <p style="font-size: 0.9rem; color: var(--color-muted); margin-bottom: 14px;">
-                  Metodología propia para auditar foto de perfil, biografía y estructura visual, dominando la estética y estrategia de tu feed.
-                </p>
+                <div class="case-study-details">
+                  <div class="case-study-item">
+                    <strong>Reto</strong>
+                    <span>Emprendedores estresados por publicar sin estrategia y con perfiles desorganizados que no convierten visitas.</span>
+                  </div>
+                  <div class="case-study-item">
+                    <strong>Solución</strong>
+                    <span>Metodología paso a paso para auditar biografía, foto y diseñar carruseles de alto impacto en menos de 3 segundos.</span>
+                  </div>
+                  <div class="case-study-item">
+                    <strong>Impacto</strong>
+                    <span>Cientos de creadores aplicando la regla de los 3 segundos con mayor retención visual y ventas.</span>
+                  </div>
+                </div>
+                <div class="case-study-tags">
+                  <span class="case-study-tag">Guía Didáctica</span>
+                  <span class="case-study-tag">Estructura de Feed</span>
+                  <span class="case-study-tag">Plantillas Sociales</span>
+                </div>
               </div>
             </div>
             <div style="padding: 0 24px 22px;">
               <a href="https://www.instagram.com/p/DMBfNpYxnuZ/" target="_blank" rel="noopener noreferrer"
-                style="font-size: 0.85rem; font-weight: 800; color: var(--color-blue);">
-                Ver recurso en Instagram (@leuswork) ↗
+                class="case-link-text">
+                Ver recurso completo en Instagram ↗
               </a>
             </div>
           </article>
@@ -457,67 +853,96 @@
             ¡Hola! Somos <strong>Dayana y Diana Añez</strong>. En <strong>Leuswork!</strong> no decoramos:
             diseñamos sistemas visuales auténticos que comunican tu valor, transmiten autoridad y venden sin sobreexplicar.
           </p>
-          <p style="color: var(--color-muted);">
+          <p style="color: var(--color-muted); margin-bottom: 20px;">
             Acompañamos a emprendedores a transformar una idea en una marca sólida que conecta con clientes reales.
           </p>
 
+          <!-- Manifiesto Leuswork Oficial -->
+          <div class="manifesto-badge-box">
+            <span class="manifesto-tag">Filosofía de Estudio</span>
+            <p class="manifesto-quote">
+              “Detrás de cada <em>‘es suerte’</em> hay un mar de trabajo duro, estrategia y noches de diseño.”
+            </p>
+            <span class="manifesto-sign">— Dayana &amp; Diana Añez</span>
+          </div>
+
           <div class="pillars-grid">
-            <div class="pillar-box">
-              <strong style="color: var(--color-blue); font-size: 1.2rem; display: block;">01. Propósito</strong>
-              <span style="font-size: 0.82rem; color: var(--color-muted);">Sin modas vacías que apaguen tu esencia.</span>
+            <div class="pillar-box pillar-box--purpose">
+              <span class="pillar-box__num">01</span>
+              <strong class="pillar-box__title">Propósito</strong>
+              <span class="pillar-box__desc">Sin modas vacías que apaguen tu esencia.</span>
+              <span class="pillar-box__badge">Estrategia Real</span>
             </div>
-            <div class="pillar-box">
-              <strong style="color: var(--color-blue); font-size: 1.2rem; display: block;">02. Cercanía 2:1</strong>
-              <span style="font-size: 0.82rem; color: var(--color-muted);">Dos diseñadoras trabajando en tu marca.</span>
+            <div class="pillar-box pillar-box--proximity">
+              <span class="pillar-box__num">02</span>
+              <strong class="pillar-box__title">Cercanía 2:1</strong>
+              <span class="pillar-box__desc">Dos diseñadoras dedicadas a tu proyecto.</span>
+              <span class="pillar-box__badge">Atención Directa</span>
             </div>
-            <div class="pillar-box">
-              <strong style="color: var(--color-blue); font-size: 1.2rem; display: block;">03. Método</strong>
-              <span style="font-size: 0.82rem; color: var(--color-muted);">Estrategia visual clara para crecer con intención.</span>
+            <div class="pillar-box pillar-box--method">
+              <span class="pillar-box__num">03</span>
+              <strong class="pillar-box__title">Método</strong>
+              <span class="pillar-box__desc">Ruta visual clara para crecer con intención.</span>
+              <span class="pillar-box__badge">Resultados</span>
             </div>
           </div>
         </div>
 
         <div class="founders-box">
 
-          <article class="founder-card">
+          <article class="founder-card founder-card--dayana">
             <div>
               <div class="founder-avatar">
                 <img src="img/dayana.jpg" alt="Foto de Dayana Añez — Co-Fundadora y Diseñadora" loading="lazy" />
               </div>
-              <span style="font-size: 0.75rem; font-weight: 800; color: var(--color-blue); text-transform: uppercase;">
-                Co-Fundadora & Diseñadora
+              <span class="founder-card__role">
+                Co-Fundadora &amp; Diseñadora
               </span>
-              <h3 style="font-size: 1.25rem; font-weight: 900; margin: 4px 0 8px;">
+              <h3 class="founder-card__name">
                 Dayana Añez
               </h3>
-              <p style="font-size: 0.88rem; color: var(--color-muted); margin-bottom: 16px;">
-                Especialista en Diseño Gráfico, Brand Kits e identidad visual estratégica para marcas y redes sociales.
+              <p class="founder-card__bio">
+                Especialista en Diseño Gráfico, Brand Kits vectoriales e identidad visual estratégica para marcas y redes.
               </p>
+              <div class="founder-skills">
+                <span class="founder-skill">Brand Kits</span>
+                <span class="founder-skill">Identidad Visual</span>
+                <span class="founder-skill">Vectores</span>
+              </div>
             </div>
             <a href="https://www.instagram.com/dayanaanez/" target="_blank" rel="noopener noreferrer"
-              style="font-size: 0.82rem; font-weight: 800; color: var(--color-blue);">
-              @dayanaanez ↗
+              class="founder-ig-link">
+              <img src="img/instagram-icon.svg" alt="" class="founder-ig-icon" aria-hidden="true" />
+              <span>@dayanaanez</span>
+              <span class="founder-ig-arrow">↗</span>
             </a>
           </article>
 
-          <article class="founder-card">
+          <article class="founder-card founder-card--diana">
             <div>
               <div class="founder-avatar">
                 <img src="img/diana.jpg" alt="Foto de Diana Añez — Co-Fundadora y Estratega" loading="lazy" />
               </div>
-              <span style="font-size: 0.75rem; font-weight: 800; color: var(--color-blue); text-transform: uppercase;">
-                Co-Fundadora & Estratega
+              <span class="founder-card__role">
+                Co-Fundadora &amp; Estratega
               </span>
-              <h3 style="font-size: 1.25rem; font-weight: 900; margin: 4px 0 8px;">
+              <h3 class="founder-card__name">
                 Diana Añez
               </h3>
-              <p style="font-size: 0.88rem; color: var(--color-muted); margin-bottom: 16px;">
-                Especialista en Estrategia de Marca, narrativa visual y conexión emocional con audiencias.
+              <p class="founder-card__bio">
+                Especialista en Estrategia de Marca, Buyer Persona, narrativa visual y conexión emocional con audiencias.
               </p>
+              <div class="founder-skills">
+                <span class="founder-skill">Estrategia 2:1</span>
+                <span class="founder-skill">Buyer Persona</span>
+                <span class="founder-skill">Storytelling</span>
+              </div>
             </div>
             <a href="https://www.instagram.com/axezpro/" target="_blank" rel="noopener noreferrer"
-              style="font-size: 0.82rem; font-weight: 800; color: var(--color-blue);">
-              @axezpro ↗
+              class="founder-ig-link">
+              <img src="img/instagram-icon.svg" alt="" class="founder-ig-icon" aria-hidden="true" />
+              <span>@axezpro</span>
+              <span class="founder-ig-arrow">↗</span>
             </a>
           </article>
 
@@ -528,6 +953,7 @@
 
     <!-- 05. Contacto -->
     <section id="contacto" class="contact-section">
+      <div class="watermark-bg watermark-bg--contact" aria-hidden="true"></div>
       <div class="container-lw">
 
         <div class="section-header" style="margin-bottom: 28px;">
@@ -539,30 +965,53 @@
 
           <div class="contact-info">
             <div>
-              <h2 style="font-size: 2.1rem; font-weight: 900; line-height: 1.1; margin-bottom: 14px;">
+              <h2 style="font-size: 2.1rem; font-weight: 900; line-height: 1.1; margin-bottom: 12px;">
                 ¿Listo para dar el siguiente paso?
               </h2>
-              <p style="font-size: 0.95rem; opacity: 0.92; margin-bottom: 24px;">
-                Cuéntanos sobre tu negocio. Revisaremos tu presencia actual y te propondremos la ruta visual adecuada para tus metas.
+              <p style="font-size: 0.95rem; opacity: 0.95; margin-bottom: 22px; line-height: 1.5;">
+                Revisamos tu presencia actual y te propondremos la ruta visual adecuada para tus metas. Escríbenos directamente o déjanos un mensaje:
               </p>
 
-              <div
-                style="background-color: rgba(10, 10, 10, 0.25); border: 2px solid rgba(255,255,255,0.4); border-radius: var(--radius-md); padding: 18px; margin-bottom: 24px;">
-                <p style="font-family: var(--font-hand); font-size: 1.5rem; margin-bottom: 6px;">
+              <!-- Canal de Contacto Directo -->
+              <div class="direct-contact-group">
+                <a href="https://ig.me/m/leuswork" target="_blank" rel="noopener noreferrer"
+                  class="direct-btn direct-btn--ig">
+                  <div class="direct-btn__content">
+                    <span class="direct-btn__title">Instagram Directo</span>
+                    <span class="direct-btn__desc">Conversa con nosotras en @leuswork</span>
+                  </div>
+                  <span class="direct-btn__circle">↗</span>
+                </a>
+              </div>
+
+              <!-- Guía "¿Cómo te ayudamos?" (Sin Proceso Transparente, Alto Contraste) -->
+              <div class="contact-guide-card">
+                <p class="contact-guide-card__title">
                   ¿Cómo te ayudamos?
                 </p>
-                <ul style="font-size: 0.88rem; display: flex; flex-direction: column; gap: 8px;">
-                  <li>1. Evaluación inicial de tu presencia visual actual.</li>
-                  <li>2. Recomendación honesta del servicio más adecuado.</li>
-                  <li>3. Propuesta directa y plan de trabajo sin compromiso.</li>
+                <p style="font-size: 0.85rem; color: #333333; margin-bottom: 12px; font-weight: 600;">
+                  Un flujo sin rodeos para que sepas qué esperar desde el primer contacto:
+                </p>
+                <ul class="contact-guide-card__steps">
+                  <li class="contact-guide-card__step">
+                    <span class="contact-guide-card__num">01</span>
+                    <span><strong>Diagnóstico Inicial:</strong> Evaluamos tu perfil o marca actual y detectamos cuellos de botella.</span>
+                  </li>
+                  <li class="contact-guide-card__step">
+                    <span class="contact-guide-card__num">02</span>
+                    <span><strong>Selección del Plan:</strong> Te recomendamos el servicio exacto según la etapa y objetivos de tu negocio.</span>
+                  </li>
+                  <li class="contact-guide-card__step">
+                    <span class="contact-guide-card__num">03</span>
+                    <span><strong>Propuesta &amp; Plan:</strong> Recibes una propuesta clara, sin compromiso, lista para empezar a crear.</span>
+                  </li>
                 </ul>
               </div>
             </div>
 
-            <div style="font-size: 0.88rem; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 16px;">
-              <p><strong>Instagram Oficial:</strong> <a href="https://www.instagram.com/leuswork/" target="_blank"
-                  rel="noopener noreferrer" style="text-decoration: underline;">@leuswork</a></p>
-              <p><strong>Equipo:</strong> @dayanaanez & @axezpro</p>
+            <div style="font-size: 0.88rem; border-top: 1px solid rgba(255,255,255,0.25); padding-top: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+              <span><strong>Instagram:</strong> <a href="https://www.instagram.com/leuswork/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; font-weight: 700;">@leuswork</a></span>
+              <span><strong>Equipo:</strong> @dayanaanez &amp; @axezpro</span>
             </div>
           </div>
 
@@ -612,7 +1061,8 @@
               </div>
 
               <button type="submit" class="btn-lw btn-lw--primary" style="width: 100%;">
-                Enviar Solicitud →
+                <span>Enviar Solicitud</span>
+                <span class="btn-lw__circle">→</span>
               </button>
             </form>
 
@@ -626,7 +1076,8 @@
               </h4>
               <p id="successText" style="font-size: 0.92rem; color: var(--color-muted); margin-bottom: 20px;"></p>
               <button type="button" class="btn-lw btn-lw--secondary" onclick="resetForm()">
-                Enviar otra solicitud
+                <span>Enviar otra solicitud</span>
+                <span class="btn-lw__circle">↺</span>
               </button>
             </div>
           </div>
@@ -641,12 +1092,10 @@
     <div class="container-lw"
       style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
       <div>
-        <div class="brand-logo" style="font-size: 1.7rem;">
-          <span class="brand-logo__leus" style="color: #FFFFFF;">Leus</span>
-          <span class="brand-logo__work" style="font-size: 2rem;">work</span>
-          <span class="brand-logo__bang" style="color: #FFFFFF;">!</span>
-        </div>
-        <p style="font-size: 0.85rem; color: #A0A0A0; margin-top: 6px;">
+        <a href="#inicio" class="brand-logo" aria-label="Leuswork Inicio">
+          <img src="img/logo-leuswork.png" alt="Leuswork!" class="brand-logo__img brand-logo__img--footer" />
+        </a>
+        <p style="font-size: 0.85rem; color: #A0A0A0; margin-top: 8px;">
           Creatividad Estratégica • Diseño con Propósito por Dayana & Diana Añez.
         </p>
       </div>

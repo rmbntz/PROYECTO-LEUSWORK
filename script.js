@@ -138,6 +138,21 @@ function resetForm() {
   }
 }
 
+// Control y navegación fluida para "Inicio" y el Logotipo
+document.querySelectorAll('a[href="#inicio"]').forEach(function (link) {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    closeMobileMenu();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    if (history.pushState) {
+      history.pushState(null, '', '#inicio');
+    }
+  });
+});
+
 window.addEventListener('scroll', function () {
   const sections = ['inicio', 'servicios', 'casos-exito', 'quienes-somos', 'contacto'];
   let currentSection = 'inicio';
