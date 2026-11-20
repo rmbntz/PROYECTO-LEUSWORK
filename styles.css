@@ -18,11 +18,11 @@
 
   --radius-sm: 8px;
   --radius-md: 14px;
-  --radius-lg: 20px;
+  --radius-lg: 18px;
   --radius-pill: 9999px;
 
-  --shadow-card: 4px 4px 0px #0A0A0A;
-  --shadow-blue: 4px 4px 0px #001AFF;
+  --shadow-card: 3px 3px 0px #0A0A0A;
+  --shadow-blue: 3px 3px 0px #001AFF;
   --shadow-sm: 2px 2px 0px #0A0A0A;
 
   --max-width: 1160px;
@@ -758,11 +758,11 @@ section[id] {
    ========================================================================== */
 .contact-guide-card {
   background-color: #FFFFFF;
-  border: 2px solid var(--color-black);
+  border: 1.5px solid var(--color-black);
   border-radius: var(--radius-md);
-  padding: 18px 20px;
-  margin-bottom: 20px;
-  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.35);
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
   color: var(--color-black);
   position: relative;
 }
