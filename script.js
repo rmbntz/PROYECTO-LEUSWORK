@@ -190,14 +190,18 @@ window.addEventListener('scroll', function () {
   let hasDragged = false;
   let startX = 0;
   let scrollStart = 0;
+  let exactScroll = 0;
 
   function autoStep() {
     if (!isDragging && !isPaused) {
-      wrapper.scrollLeft += 0.65;
+      exactScroll += 0.7;
       const halfWidth = track.scrollWidth / 2;
-      if (halfWidth > 0 && wrapper.scrollLeft >= halfWidth) {
-        wrapper.scrollLeft -= halfWidth;
+      if (halfWidth > 0 && exactScroll >= halfWidth) {
+        exactScroll -= halfWidth;
       }
+      wrapper.scrollLeft = exactScroll;
+    } else {
+      exactScroll = wrapper.scrollLeft;
     }
     requestAnimationFrame(autoStep);
   }
