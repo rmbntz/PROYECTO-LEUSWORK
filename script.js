@@ -178,3 +178,69 @@ window.addEventListener('scroll', function () {
     }
   });
 });
+
+// Reel interactivo: deslizamiento automático lento + arrastre con mouse o dedo
+(function () {
+  const wrapper = document.querySelector('.works-reel-wrapper');
+  const track = document.querySelector('.works-reel-track');
+  if (!wrapper || !track) return;
+
+  let isDragging = false;
+  let isPaused = false;
+  let hasDragged = false;
+  let startX = 0;
+  let scrollStart = 0;
+
+  function autoStep() {
+    if (!isDragging && !isPaused) {
+      wrapper.scrollLeft += 0.65;
+      const halfWidth = track.scrollWidth / 2;
+      if (halfWidth > 0 && wrapper.scrollLeft >= halfWidth) {
+        wrapper.scrollLeft -= halfWidth;
+      }
+    }
+    requestAnimationFrame(autoStep);
+  }
+  requestAnimationFrame(autoStep);
+
+  wrapper.addEventListener('mouseenter', function () { isPaused = true; });
+  wrapper.addEventListener('mouseleave', function () {
+    isPaused = false;
+    isDragging = false;
+    wrapper.classList.remove('is-dragging');
+  });
+
+  wrapper.addEventListener('mousedown', function (e) {
+    isDragging = true;
+    hasDragged = false;
+    startX = e.pageX - wrapper.offsetLeft;
+    scrollStart = wrapper.scrollLeft;
+    wrapper.classList.add('is-dragging');
+  });
+
+  window.addEventListener('mouseup', function () {
+    if (!isDragging) return;
+    isDragging = false;
+    wrapper.classList.remove('is-dragging');
+  });
+
+  wrapper.addEventListener('mousemove', function (e) {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - wrapper.offsetLeft;
+    const walk = x - startX;
+    if (Math.abs(walk) > 5) hasDragged = true;
+    wrapper.scrollLeft = scrollStart - walk;
+  });
+
+  wrapper.addEventListener('touchstart', function () { isPaused = true; }, { passive: true });
+  wrapper.addEventListener('touchend', function () { isPaused = false; }, { passive: true });
+
+  wrapper.addEventListener('dragstart', function (e) { e.preventDefault(); });
+  wrapper.addEventListener('click', function (e) {
+    if (hasDragged) {
+      e.preventDefault();
+      hasDragged = false;
+    }
+  });
+})();
